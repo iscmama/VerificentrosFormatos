@@ -1,0 +1,625 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="VerificentrosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Dinamometros">
+          <Key>
+            <PropertyRef Name="idDinamometro" />
+          </Key>
+          <Property Name="idDinamometro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idLinea" Type="int" Nullable="false" />
+          <Property Name="marca" Type="varchar" MaxLength="5000" />
+          <Property Name="modelo" Type="varchar" MaxLength="5000" />
+          <Property Name="serie" Type="varchar" MaxLength="5000" />
+          <Property Name="fechaInstalacion" Type="datetime" />
+          <Property Name="fechaAlta" Type="datetime" Nullable="false" />
+          <Property Name="idUsuarioAlta" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Gabinetes">
+          <Key>
+            <PropertyRef Name="idGabinete" />
+          </Key>
+          <Property Name="idGabinete" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idLinea" Type="int" Nullable="false" />
+          <Property Name="marca" Type="varchar" MaxLength="1000" />
+          <Property Name="modelo" Type="varchar" MaxLength="1000" />
+          <Property Name="serie" Type="varchar" MaxLength="1000" />
+          <Property Name="fechaInstalacion" Type="datetime" />
+          <Property Name="fechaAlta" Type="datetime" Nullable="false" />
+          <Property Name="idUsuarioAlta" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Lineas">
+          <Key>
+            <PropertyRef Name="idLinea" />
+          </Key>
+          <Property Name="idLinea" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idVerificentro" Type="int" Nullable="false" />
+          <Property Name="numero" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="combustible" Type="varchar" MaxLength="5000" />
+          <Property Name="tipo" Type="varchar" MaxLength="5000" />
+          <Property Name="fechaAlta" Type="datetime" Nullable="false" />
+          <Property Name="idUsuarioAlta" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Microbancas">
+          <Key>
+            <PropertyRef Name="idMicrobanca" />
+          </Key>
+          <Property Name="idMicrobanca" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idLinea" Type="int" Nullable="false" />
+          <Property Name="marca" Type="varchar" MaxLength="5000" />
+          <Property Name="modelo" Type="varchar" MaxLength="5000" />
+          <Property Name="version" Type="varchar" MaxLength="50" />
+          <Property Name="serie" Type="varchar" MaxLength="5000" />
+          <Property Name="fechaInstalacion" Type="datetime" />
+          <Property Name="numeroFactura" Type="varchar" MaxLength="5000" />
+          <Property Name="fechaAlta" Type="datetime" Nullable="false" />
+          <Property Name="idUsuarioAlta" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Opacimetros">
+          <Key>
+            <PropertyRef Name="idOpacimetro" />
+          </Key>
+          <Property Name="idOpacimetro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idLinea" Type="int" Nullable="false" />
+          <Property Name="marca" Type="varchar" MaxLength="5000" />
+          <Property Name="modelo" Type="varchar" MaxLength="5000" />
+          <Property Name="serie" Type="varchar" MaxLength="5000" />
+          <Property Name="fechaInstalacion" Type="datetime" />
+          <Property Name="numeroFactura" Type="varchar" MaxLength="5000" />
+          <Property Name="fechaAlta" Type="datetime" Nullable="false" />
+          <Property Name="idUsuarioAlta" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RepresentantesLegales">
+          <Key>
+            <PropertyRef Name="idRepresentanteLegal" />
+          </Key>
+          <Property Name="idRepresentanteLegal" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idVerificentro" Type="int" Nullable="false" />
+          <Property Name="nombres" Type="varchar" MaxLength="5000" />
+          <Property Name="apPaterno" Type="varchar" MaxLength="5000" />
+          <Property Name="apMaterno" Type="varchar" MaxLength="5000" />
+          <Property Name="fechaAlta" Type="datetime" Nullable="false" />
+          <Property Name="idUsuarioAlta" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Tacometros">
+          <Key>
+            <PropertyRef Name="idTacometro" />
+          </Key>
+          <Property Name="idTacometro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idLinea" Type="int" Nullable="false" />
+          <Property Name="tipo" Type="varchar" MaxLength="5000" />
+          <Property Name="marca" Type="varchar" MaxLength="5000" />
+          <Property Name="modelo" Type="varchar" MaxLength="5000" />
+          <Property Name="serie" Type="varchar" MaxLength="5000" />
+          <Property Name="fechaInstalacion" Type="datetime" />
+          <Property Name="numeroFactura" Type="varchar" MaxLength="5000" />
+          <Property Name="fechaAlta" Type="datetime" Nullable="false" />
+          <Property Name="idUsuarioAlta" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Verificentros">
+          <Key>
+            <PropertyRef Name="idVerificentro" />
+          </Key>
+          <Property Name="idVerificentro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="numeroCentro" Type="varchar" MaxLength="1000" Nullable="false" />
+          <Property Name="siglas" Type="varchar" MaxLength="5000" Nullable="false" />
+          <Property Name="razonSocial" Type="varchar" MaxLength="5000" Nullable="false" />
+          <Property Name="total" Type="int" Nullable="false" />
+          <Property Name="fechaAlta" Type="datetime" Nullable="false" />
+          <Property Name="idUsuarioAlta" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Dinamometros_Lineas">
+          <End Role="Lineas" Type="Self.Lineas" Multiplicity="1" />
+          <End Role="Dinamometros" Type="Self.Dinamometros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lineas">
+              <PropertyRef Name="idLinea" />
+            </Principal>
+            <Dependent Role="Dinamometros">
+              <PropertyRef Name="idLinea" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Gabinetes_Lineas">
+          <End Role="Lineas" Type="Self.Lineas" Multiplicity="1" />
+          <End Role="Gabinetes" Type="Self.Gabinetes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lineas">
+              <PropertyRef Name="idLinea" />
+            </Principal>
+            <Dependent Role="Gabinetes">
+              <PropertyRef Name="idLinea" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Lineas_Verificentros">
+          <End Role="Verificentros" Type="Self.Verificentros" Multiplicity="1" />
+          <End Role="Lineas" Type="Self.Lineas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Verificentros">
+              <PropertyRef Name="idVerificentro" />
+            </Principal>
+            <Dependent Role="Lineas">
+              <PropertyRef Name="idVerificentro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Microbancas_Lineas">
+          <End Role="Lineas" Type="Self.Lineas" Multiplicity="1" />
+          <End Role="Microbancas" Type="Self.Microbancas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lineas">
+              <PropertyRef Name="idLinea" />
+            </Principal>
+            <Dependent Role="Microbancas">
+              <PropertyRef Name="idLinea" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Opacimetros_Lineas">
+          <End Role="Lineas" Type="Self.Lineas" Multiplicity="1" />
+          <End Role="Opacimetros" Type="Self.Opacimetros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lineas">
+              <PropertyRef Name="idLinea" />
+            </Principal>
+            <Dependent Role="Opacimetros">
+              <PropertyRef Name="idLinea" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RepresentantesLegales_RepresentantesLegales">
+          <End Role="Verificentros" Type="Self.Verificentros" Multiplicity="1" />
+          <End Role="RepresentantesLegales" Type="Self.RepresentantesLegales" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Verificentros">
+              <PropertyRef Name="idVerificentro" />
+            </Principal>
+            <Dependent Role="RepresentantesLegales">
+              <PropertyRef Name="idVerificentro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tacometros_Lineas">
+          <End Role="Lineas" Type="Self.Lineas" Multiplicity="1" />
+          <End Role="Tacometros" Type="Self.Tacometros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lineas">
+              <PropertyRef Name="idLinea" />
+            </Principal>
+            <Dependent Role="Tacometros">
+              <PropertyRef Name="idLinea" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="VerificentrosModelStoreContainer">
+          <EntitySet Name="Dinamometros" EntityType="Self.Dinamometros" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Gabinetes" EntityType="Self.Gabinetes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Lineas" EntityType="Self.Lineas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Microbancas" EntityType="Self.Microbancas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Opacimetros" EntityType="Self.Opacimetros" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RepresentantesLegales" EntityType="Self.RepresentantesLegales" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tacometros" EntityType="Self.Tacometros" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Verificentros" EntityType="Self.Verificentros" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Dinamometros_Lineas" Association="Self.FK_Dinamometros_Lineas">
+            <End Role="Lineas" EntitySet="Lineas" />
+            <End Role="Dinamometros" EntitySet="Dinamometros" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Gabinetes_Lineas" Association="Self.FK_Gabinetes_Lineas">
+            <End Role="Lineas" EntitySet="Lineas" />
+            <End Role="Gabinetes" EntitySet="Gabinetes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Lineas_Verificentros" Association="Self.FK_Lineas_Verificentros">
+            <End Role="Verificentros" EntitySet="Verificentros" />
+            <End Role="Lineas" EntitySet="Lineas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Microbancas_Lineas" Association="Self.FK_Microbancas_Lineas">
+            <End Role="Lineas" EntitySet="Lineas" />
+            <End Role="Microbancas" EntitySet="Microbancas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Opacimetros_Lineas" Association="Self.FK_Opacimetros_Lineas">
+            <End Role="Lineas" EntitySet="Lineas" />
+            <End Role="Opacimetros" EntitySet="Opacimetros" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RepresentantesLegales_RepresentantesLegales" Association="Self.FK_RepresentantesLegales_RepresentantesLegales">
+            <End Role="Verificentros" EntitySet="Verificentros" />
+            <End Role="RepresentantesLegales" EntitySet="RepresentantesLegales" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tacometros_Lineas" Association="Self.FK_Tacometros_Lineas">
+            <End Role="Lineas" EntitySet="Lineas" />
+            <End Role="Tacometros" EntitySet="Tacometros" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="VerificentrosModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="VerificentrosDB" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Dinamometros" EntityType="VerificentrosModel.Dinamometros" />
+          <EntitySet Name="Gabinetes" EntityType="VerificentrosModel.Gabinetes" />
+          <EntitySet Name="Lineas" EntityType="VerificentrosModel.Lineas" />
+          <EntitySet Name="Microbancas" EntityType="VerificentrosModel.Microbancas" />
+          <EntitySet Name="Opacimetros" EntityType="VerificentrosModel.Opacimetros" />
+          <EntitySet Name="RepresentantesLegales" EntityType="VerificentrosModel.RepresentantesLegales" />
+          <EntitySet Name="Tacometros" EntityType="VerificentrosModel.Tacometros" />
+          <EntitySet Name="Verificentros" EntityType="VerificentrosModel.Verificentros" />
+          <AssociationSet Name="FK_Dinamometros_Lineas" Association="VerificentrosModel.FK_Dinamometros_Lineas">
+            <End Role="Lineas" EntitySet="Lineas" />
+            <End Role="Dinamometros" EntitySet="Dinamometros" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Gabinetes_Lineas" Association="VerificentrosModel.FK_Gabinetes_Lineas">
+            <End Role="Lineas" EntitySet="Lineas" />
+            <End Role="Gabinetes" EntitySet="Gabinetes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Lineas_Verificentros" Association="VerificentrosModel.FK_Lineas_Verificentros">
+            <End Role="Verificentros" EntitySet="Verificentros" />
+            <End Role="Lineas" EntitySet="Lineas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Microbancas_Lineas" Association="VerificentrosModel.FK_Microbancas_Lineas">
+            <End Role="Lineas" EntitySet="Lineas" />
+            <End Role="Microbancas" EntitySet="Microbancas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Opacimetros_Lineas" Association="VerificentrosModel.FK_Opacimetros_Lineas">
+            <End Role="Lineas" EntitySet="Lineas" />
+            <End Role="Opacimetros" EntitySet="Opacimetros" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tacometros_Lineas" Association="VerificentrosModel.FK_Tacometros_Lineas">
+            <End Role="Lineas" EntitySet="Lineas" />
+            <End Role="Tacometros" EntitySet="Tacometros" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RepresentantesLegales_RepresentantesLegales" Association="VerificentrosModel.FK_RepresentantesLegales_RepresentantesLegales">
+            <End Role="Verificentros" EntitySet="Verificentros" />
+            <End Role="RepresentantesLegales" EntitySet="RepresentantesLegales" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Dinamometros">
+          <Key>
+            <PropertyRef Name="idDinamometro" />
+          </Key>
+          <Property Name="idDinamometro" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idLinea" Type="Int32" Nullable="false" />
+          <Property Name="marca" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Name="modelo" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Name="serie" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Name="fechaInstalacion" Type="DateTime" Precision="3" />
+          <Property Name="fechaAlta" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="idUsuarioAlta" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Lineas" Relationship="VerificentrosModel.FK_Dinamometros_Lineas" FromRole="Dinamometros" ToRole="Lineas" />
+        </EntityType>
+        <EntityType Name="Gabinetes">
+          <Key>
+            <PropertyRef Name="idGabinete" />
+          </Key>
+          <Property Name="idGabinete" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idLinea" Type="Int32" Nullable="false" />
+          <Property Name="marca" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="modelo" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="serie" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="fechaInstalacion" Type="DateTime" Precision="3" />
+          <Property Name="fechaAlta" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="idUsuarioAlta" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Lineas" Relationship="VerificentrosModel.FK_Gabinetes_Lineas" FromRole="Gabinetes" ToRole="Lineas" />
+        </EntityType>
+        <EntityType Name="Lineas">
+          <Key>
+            <PropertyRef Name="idLinea" />
+          </Key>
+          <Property Name="idLinea" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idVerificentro" Type="Int32" Nullable="false" />
+          <Property Name="numero" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="combustible" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Name="tipo" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Name="fechaAlta" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="idUsuarioAlta" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Dinamometros" Relationship="VerificentrosModel.FK_Dinamometros_Lineas" FromRole="Lineas" ToRole="Dinamometros" />
+          <NavigationProperty Name="Gabinetes" Relationship="VerificentrosModel.FK_Gabinetes_Lineas" FromRole="Lineas" ToRole="Gabinetes" />
+          <NavigationProperty Name="Verificentros" Relationship="VerificentrosModel.FK_Lineas_Verificentros" FromRole="Lineas" ToRole="Verificentros" />
+          <NavigationProperty Name="Microbancas" Relationship="VerificentrosModel.FK_Microbancas_Lineas" FromRole="Lineas" ToRole="Microbancas" />
+          <NavigationProperty Name="Opacimetros" Relationship="VerificentrosModel.FK_Opacimetros_Lineas" FromRole="Lineas" ToRole="Opacimetros" />
+          <NavigationProperty Name="Tacometros" Relationship="VerificentrosModel.FK_Tacometros_Lineas" FromRole="Lineas" ToRole="Tacometros" />
+        </EntityType>
+        <EntityType Name="Microbancas">
+          <Key>
+            <PropertyRef Name="idMicrobanca" />
+          </Key>
+          <Property Name="idMicrobanca" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idLinea" Type="Int32" Nullable="false" />
+          <Property Name="marca" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Name="modelo" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Name="version" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="serie" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Name="fechaInstalacion" Type="DateTime" Precision="3" />
+          <Property Name="numeroFactura" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Name="fechaAlta" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="idUsuarioAlta" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Lineas" Relationship="VerificentrosModel.FK_Microbancas_Lineas" FromRole="Microbancas" ToRole="Lineas" />
+        </EntityType>
+        <EntityType Name="Opacimetros">
+          <Key>
+            <PropertyRef Name="idOpacimetro" />
+          </Key>
+          <Property Name="idOpacimetro" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idLinea" Type="Int32" Nullable="false" />
+          <Property Name="marca" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Name="modelo" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Name="serie" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Name="fechaInstalacion" Type="DateTime" Precision="3" />
+          <Property Name="numeroFactura" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Name="fechaAlta" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="idUsuarioAlta" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Lineas" Relationship="VerificentrosModel.FK_Opacimetros_Lineas" FromRole="Opacimetros" ToRole="Lineas" />
+        </EntityType>
+        <EntityType Name="RepresentantesLegales">
+          <Key>
+            <PropertyRef Name="idRepresentanteLegal" />
+          </Key>
+          <Property Name="idRepresentanteLegal" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idVerificentro" Type="Int32" Nullable="false" />
+          <Property Name="nombres" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Name="apPaterno" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Name="apMaterno" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Name="fechaAlta" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="idUsuarioAlta" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Verificentros" Relationship="VerificentrosModel.FK_RepresentantesLegales_RepresentantesLegales" FromRole="RepresentantesLegales" ToRole="Verificentros" />
+        </EntityType>
+        <EntityType Name="Tacometros">
+          <Key>
+            <PropertyRef Name="idTacometro" />
+          </Key>
+          <Property Name="idTacometro" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idLinea" Type="Int32" Nullable="false" />
+          <Property Name="tipo" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Name="marca" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Name="modelo" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Name="serie" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Name="fechaInstalacion" Type="DateTime" Precision="3" />
+          <Property Name="numeroFactura" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Name="fechaAlta" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="idUsuarioAlta" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Lineas" Relationship="VerificentrosModel.FK_Tacometros_Lineas" FromRole="Tacometros" ToRole="Lineas" />
+        </EntityType>
+        <EntityType Name="Verificentros">
+          <Key>
+            <PropertyRef Name="idVerificentro" />
+          </Key>
+          <Property Name="idVerificentro" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="numeroCentro" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="siglas" Type="String" Nullable="false" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Name="razonSocial" Type="String" Nullable="false" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Name="total" Type="Int32" Nullable="false" />
+          <Property Name="fechaAlta" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="idUsuarioAlta" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Lineas" Relationship="VerificentrosModel.FK_Lineas_Verificentros" FromRole="Verificentros" ToRole="Lineas" />
+          <NavigationProperty Name="RepresentantesLegales" Relationship="VerificentrosModel.FK_RepresentantesLegales_RepresentantesLegales" FromRole="Verificentros" ToRole="RepresentantesLegales" />
+        </EntityType>
+        <Association Name="FK_Dinamometros_Lineas">
+          <End Type="VerificentrosModel.Lineas" Role="Lineas" Multiplicity="1" />
+          <End Type="VerificentrosModel.Dinamometros" Role="Dinamometros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lineas">
+              <PropertyRef Name="idLinea" />
+            </Principal>
+            <Dependent Role="Dinamometros">
+              <PropertyRef Name="idLinea" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Gabinetes_Lineas">
+          <End Type="VerificentrosModel.Lineas" Role="Lineas" Multiplicity="1" />
+          <End Type="VerificentrosModel.Gabinetes" Role="Gabinetes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lineas">
+              <PropertyRef Name="idLinea" />
+            </Principal>
+            <Dependent Role="Gabinetes">
+              <PropertyRef Name="idLinea" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Lineas_Verificentros">
+          <End Type="VerificentrosModel.Verificentros" Role="Verificentros" Multiplicity="1" />
+          <End Type="VerificentrosModel.Lineas" Role="Lineas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Verificentros">
+              <PropertyRef Name="idVerificentro" />
+            </Principal>
+            <Dependent Role="Lineas">
+              <PropertyRef Name="idVerificentro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Microbancas_Lineas">
+          <End Type="VerificentrosModel.Lineas" Role="Lineas" Multiplicity="1" />
+          <End Type="VerificentrosModel.Microbancas" Role="Microbancas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lineas">
+              <PropertyRef Name="idLinea" />
+            </Principal>
+            <Dependent Role="Microbancas">
+              <PropertyRef Name="idLinea" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Opacimetros_Lineas">
+          <End Type="VerificentrosModel.Lineas" Role="Lineas" Multiplicity="1" />
+          <End Type="VerificentrosModel.Opacimetros" Role="Opacimetros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lineas">
+              <PropertyRef Name="idLinea" />
+            </Principal>
+            <Dependent Role="Opacimetros">
+              <PropertyRef Name="idLinea" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tacometros_Lineas">
+          <End Type="VerificentrosModel.Lineas" Role="Lineas" Multiplicity="1" />
+          <End Type="VerificentrosModel.Tacometros" Role="Tacometros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lineas">
+              <PropertyRef Name="idLinea" />
+            </Principal>
+            <Dependent Role="Tacometros">
+              <PropertyRef Name="idLinea" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RepresentantesLegales_RepresentantesLegales">
+          <End Type="VerificentrosModel.Verificentros" Role="Verificentros" Multiplicity="1" />
+          <End Type="VerificentrosModel.RepresentantesLegales" Role="RepresentantesLegales" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Verificentros">
+              <PropertyRef Name="idVerificentro" />
+            </Principal>
+            <Dependent Role="RepresentantesLegales">
+              <PropertyRef Name="idVerificentro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="VerificentrosModelStoreContainer" CdmEntityContainer="VerificentrosDB">
+          <EntitySetMapping Name="Dinamometros">
+            <EntityTypeMapping TypeName="VerificentrosModel.Dinamometros">
+              <MappingFragment StoreEntitySet="Dinamometros">
+                <ScalarProperty Name="idUsuarioAlta" ColumnName="idUsuarioAlta" />
+                <ScalarProperty Name="fechaAlta" ColumnName="fechaAlta" />
+                <ScalarProperty Name="fechaInstalacion" ColumnName="fechaInstalacion" />
+                <ScalarProperty Name="serie" ColumnName="serie" />
+                <ScalarProperty Name="modelo" ColumnName="modelo" />
+                <ScalarProperty Name="marca" ColumnName="marca" />
+                <ScalarProperty Name="idLinea" ColumnName="idLinea" />
+                <ScalarProperty Name="idDinamometro" ColumnName="idDinamometro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Gabinetes">
+            <EntityTypeMapping TypeName="VerificentrosModel.Gabinetes">
+              <MappingFragment StoreEntitySet="Gabinetes">
+                <ScalarProperty Name="idUsuarioAlta" ColumnName="idUsuarioAlta" />
+                <ScalarProperty Name="fechaAlta" ColumnName="fechaAlta" />
+                <ScalarProperty Name="fechaInstalacion" ColumnName="fechaInstalacion" />
+                <ScalarProperty Name="serie" ColumnName="serie" />
+                <ScalarProperty Name="modelo" ColumnName="modelo" />
+                <ScalarProperty Name="marca" ColumnName="marca" />
+                <ScalarProperty Name="idLinea" ColumnName="idLinea" />
+                <ScalarProperty Name="idGabinete" ColumnName="idGabinete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Lineas">
+            <EntityTypeMapping TypeName="VerificentrosModel.Lineas">
+              <MappingFragment StoreEntitySet="Lineas">
+                <ScalarProperty Name="idUsuarioAlta" ColumnName="idUsuarioAlta" />
+                <ScalarProperty Name="fechaAlta" ColumnName="fechaAlta" />
+                <ScalarProperty Name="tipo" ColumnName="tipo" />
+                <ScalarProperty Name="combustible" ColumnName="combustible" />
+                <ScalarProperty Name="numero" ColumnName="numero" />
+                <ScalarProperty Name="idVerificentro" ColumnName="idVerificentro" />
+                <ScalarProperty Name="idLinea" ColumnName="idLinea" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Microbancas">
+            <EntityTypeMapping TypeName="VerificentrosModel.Microbancas">
+              <MappingFragment StoreEntitySet="Microbancas">
+                <ScalarProperty Name="idUsuarioAlta" ColumnName="idUsuarioAlta" />
+                <ScalarProperty Name="fechaAlta" ColumnName="fechaAlta" />
+                <ScalarProperty Name="numeroFactura" ColumnName="numeroFactura" />
+                <ScalarProperty Name="fechaInstalacion" ColumnName="fechaInstalacion" />
+                <ScalarProperty Name="serie" ColumnName="serie" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="modelo" ColumnName="modelo" />
+                <ScalarProperty Name="marca" ColumnName="marca" />
+                <ScalarProperty Name="idLinea" ColumnName="idLinea" />
+                <ScalarProperty Name="idMicrobanca" ColumnName="idMicrobanca" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Opacimetros">
+            <EntityTypeMapping TypeName="VerificentrosModel.Opacimetros">
+              <MappingFragment StoreEntitySet="Opacimetros">
+                <ScalarProperty Name="idUsuarioAlta" ColumnName="idUsuarioAlta" />
+                <ScalarProperty Name="fechaAlta" ColumnName="fechaAlta" />
+                <ScalarProperty Name="numeroFactura" ColumnName="numeroFactura" />
+                <ScalarProperty Name="fechaInstalacion" ColumnName="fechaInstalacion" />
+                <ScalarProperty Name="serie" ColumnName="serie" />
+                <ScalarProperty Name="modelo" ColumnName="modelo" />
+                <ScalarProperty Name="marca" ColumnName="marca" />
+                <ScalarProperty Name="idLinea" ColumnName="idLinea" />
+                <ScalarProperty Name="idOpacimetro" ColumnName="idOpacimetro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RepresentantesLegales">
+            <EntityTypeMapping TypeName="VerificentrosModel.RepresentantesLegales">
+              <MappingFragment StoreEntitySet="RepresentantesLegales">
+                <ScalarProperty Name="idUsuarioAlta" ColumnName="idUsuarioAlta" />
+                <ScalarProperty Name="fechaAlta" ColumnName="fechaAlta" />
+                <ScalarProperty Name="apMaterno" ColumnName="apMaterno" />
+                <ScalarProperty Name="apPaterno" ColumnName="apPaterno" />
+                <ScalarProperty Name="nombres" ColumnName="nombres" />
+                <ScalarProperty Name="idVerificentro" ColumnName="idVerificentro" />
+                <ScalarProperty Name="idRepresentanteLegal" ColumnName="idRepresentanteLegal" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tacometros">
+            <EntityTypeMapping TypeName="VerificentrosModel.Tacometros">
+              <MappingFragment StoreEntitySet="Tacometros">
+                <ScalarProperty Name="idUsuarioAlta" ColumnName="idUsuarioAlta" />
+                <ScalarProperty Name="fechaAlta" ColumnName="fechaAlta" />
+                <ScalarProperty Name="numeroFactura" ColumnName="numeroFactura" />
+                <ScalarProperty Name="fechaInstalacion" ColumnName="fechaInstalacion" />
+                <ScalarProperty Name="serie" ColumnName="serie" />
+                <ScalarProperty Name="modelo" ColumnName="modelo" />
+                <ScalarProperty Name="marca" ColumnName="marca" />
+                <ScalarProperty Name="tipo" ColumnName="tipo" />
+                <ScalarProperty Name="idLinea" ColumnName="idLinea" />
+                <ScalarProperty Name="idTacometro" ColumnName="idTacometro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Verificentros">
+            <EntityTypeMapping TypeName="VerificentrosModel.Verificentros">
+              <MappingFragment StoreEntitySet="Verificentros">
+                <ScalarProperty Name="idUsuarioAlta" ColumnName="idUsuarioAlta" />
+                <ScalarProperty Name="fechaAlta" ColumnName="fechaAlta" />
+                <ScalarProperty Name="total" ColumnName="total" />
+                <ScalarProperty Name="razonSocial" ColumnName="razonSocial" />
+                <ScalarProperty Name="siglas" ColumnName="siglas" />
+                <ScalarProperty Name="numeroCentro" ColumnName="numeroCentro" />
+                <ScalarProperty Name="idVerificentro" ColumnName="idVerificentro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

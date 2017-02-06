@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f759e35b7da041738982ab4fe77823ad" Name="Diagram1">
+        <EntityTypeShape EntityType="VerificentrosModel.Dinamometros" Width="1.5" PointX="5.25" PointY="16.25" />
+        <EntityTypeShape EntityType="VerificentrosModel.Gabinetes" Width="1.5" PointX="5.25" PointY="8.875" />
+        <EntityTypeShape EntityType="VerificentrosModel.Lineas" Width="1.5" PointX="3" PointY="12.25" />
+        <EntityTypeShape EntityType="VerificentrosModel.Microbancas" Width="1.5" PointX="5.25" PointY="19.75" />
+        <EntityTypeShape EntityType="VerificentrosModel.Opacimetros" Width="1.5" PointX="5.25" PointY="5.125" />
+        <EntityTypeShape EntityType="VerificentrosModel.RepresentantesLegales" Width="1.5" PointX="3" PointY="1.875" />
+        <EntityTypeShape EntityType="VerificentrosModel.Tacometros" Width="1.5" PointX="5.25" PointY="12.375" />
+        <EntityTypeShape EntityType="VerificentrosModel.Verificentros" Width="1.5" PointX="0.75" PointY="11" />
+        <AssociationConnector Association="VerificentrosModel.FK_Dinamometros_Lineas" />
+        <AssociationConnector Association="VerificentrosModel.FK_Gabinetes_Lineas" />
+        <AssociationConnector Association="VerificentrosModel.FK_Lineas_Verificentros" />
+        <AssociationConnector Association="VerificentrosModel.FK_Microbancas_Lineas" />
+        <AssociationConnector Association="VerificentrosModel.FK_Opacimetros_Lineas" />
+        <AssociationConnector Association="VerificentrosModel.FK_Tacometros_Lineas" />
+        <AssociationConnector Association="VerificentrosModel.FK_RepresentantesLegales_RepresentantesLegales" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
