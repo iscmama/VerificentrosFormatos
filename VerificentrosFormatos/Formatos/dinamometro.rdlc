@@ -301,22 +301,6 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Image Name="logo">
-        <Source>Embedded</Source>
-        <Value>logo</Value>
-        <Sizing>FitProportional</Sizing>
-        <Top>1.91844cm</Top>
-        <Left>0.42883cm</Left>
-        <Height>1.96749cm</Height>
-        <Width>4.99693cm</Width>
-        <ZIndex>8</ZIndex>
-        <ToolTip>logo</ToolTip>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-        </Style>
-      </Image>
       <Textbox Name="Textbox1">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
@@ -343,7 +327,7 @@
         <Left>9.69833cm</Left>
         <Height>0.6cm</Height>
         <Width>3.72714cm</Width>
-        <ZIndex>9</ZIndex>
+        <ZIndex>8</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -380,7 +364,7 @@
         <Left>13.42547cm</Left>
         <Height>0.6cm</Height>
         <Width>5.02807cm</Width>
-        <ZIndex>10</ZIndex>
+        <ZIndex>9</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -420,7 +404,7 @@
         <Left>0.42883cm</Left>
         <Height>3.44082cm</Height>
         <Width>18.05999cm</Width>
-        <ZIndex>11</ZIndex>
+        <ZIndex>10</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -678,13 +662,52 @@
               <TextAlign>Left</TextAlign>
             </Style>
           </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Calibri</FontFamily>
+                  <FontSize>13pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <LeftIndent>0cm</LeftIndent>
+            <RightIndent>0cm</RightIndent>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>C.c.p. Dra. Susana Libién Díaz González.- Directora General de Prevención y Control de la Contaminación Atmosférica</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Calibri</FontFamily>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <LeftIndent>0cm</LeftIndent>
+            <RightIndent>0cm</RightIndent>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox7</rd:DefaultName>
         <Top>10.33144cm</Top>
         <Left>0.42883cm</Left>
-        <Height>8.25862cm</Height>
+        <Height>10.24829cm</Height>
         <Width>18.05999cm</Width>
-        <ZIndex>12</ZIndex>
+        <ZIndex>11</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -696,7 +719,7 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>7.91892in</Height>
+    <Height>8.16892in</Height>
     <Style>
       <Border>
         <Style>None</Style>
