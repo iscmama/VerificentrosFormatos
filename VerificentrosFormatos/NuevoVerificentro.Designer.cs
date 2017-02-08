@@ -42,6 +42,10 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnAgregarRepresentante = new System.Windows.Forms.Button();
             this.dgvRepresentantes = new System.Windows.Forms.DataGridView();
+            this.eliminaRepresentante = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.nombres = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apPaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apMaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabRepresentantes = new System.Windows.Forms.TabPage();
             this.tabLineas = new System.Windows.Forms.TabPage();
@@ -70,10 +74,6 @@
             this.btnAgregarTaco = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.eliminaRepresentante = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.nombres = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apPaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apMaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.numeroLinea = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.combustible = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -262,6 +262,35 @@
             this.dgvRepresentantes.Size = new System.Drawing.Size(1202, 349);
             this.dgvRepresentantes.TabIndex = 0;
             this.dgvRepresentantes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRepresentantes_CellClick);
+            // 
+            // eliminaRepresentante
+            // 
+            this.eliminaRepresentante.HeaderText = "Eliminar";
+            this.eliminaRepresentante.MinimumWidth = 100;
+            this.eliminaRepresentante.Name = "eliminaRepresentante";
+            this.eliminaRepresentante.Text = "Eliminar";
+            this.eliminaRepresentante.UseColumnTextForButtonValue = true;
+            // 
+            // nombres
+            // 
+            this.nombres.HeaderText = "Nombre(s)";
+            this.nombres.MinimumWidth = 200;
+            this.nombres.Name = "nombres";
+            this.nombres.Width = 200;
+            // 
+            // apPaterno
+            // 
+            this.apPaterno.HeaderText = "Apellido Paterno";
+            this.apPaterno.MinimumWidth = 200;
+            this.apPaterno.Name = "apPaterno";
+            this.apPaterno.Width = 200;
+            // 
+            // apMaterno
+            // 
+            this.apMaterno.HeaderText = "Apellido Materno";
+            this.apMaterno.MinimumWidth = 200;
+            this.apMaterno.Name = "apMaterno";
+            this.apMaterno.Width = 200;
             // 
             // tabControl1
             // 
@@ -619,35 +648,6 @@
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // eliminaRepresentante
-            // 
-            this.eliminaRepresentante.HeaderText = "Eliminar";
-            this.eliminaRepresentante.MinimumWidth = 100;
-            this.eliminaRepresentante.Name = "eliminaRepresentante";
-            this.eliminaRepresentante.Text = "Eliminar";
-            this.eliminaRepresentante.UseColumnTextForButtonValue = true;
-            // 
-            // nombres
-            // 
-            this.nombres.HeaderText = "Nombre(s)";
-            this.nombres.MinimumWidth = 200;
-            this.nombres.Name = "nombres";
-            this.nombres.Width = 200;
-            // 
-            // apPaterno
-            // 
-            this.apPaterno.HeaderText = "Apellido Paterno";
-            this.apPaterno.MinimumWidth = 200;
-            this.apPaterno.Name = "apPaterno";
-            this.apPaterno.Width = 200;
-            // 
-            // apMaterno
-            // 
-            this.apMaterno.HeaderText = "Apellido Materno";
-            this.apMaterno.MinimumWidth = 200;
-            this.apMaterno.Name = "apMaterno";
-            this.apMaterno.Width = 200;
-            // 
             // Eliminar
             // 
             this.Eliminar.HeaderText = "Eliminar";
@@ -660,6 +660,7 @@
             this.numeroLinea.HeaderText = "Línea";
             this.numeroLinea.MinimumWidth = 50;
             this.numeroLinea.Name = "numeroLinea";
+            this.numeroLinea.ReadOnly = true;
             // 
             // combustible
             // 
@@ -692,6 +693,7 @@
             this.linea.HeaderText = "Línea";
             this.linea.MinimumWidth = 50;
             this.linea.Name = "linea";
+            this.linea.ReadOnly = true;
             // 
             // marca
             // 
@@ -732,6 +734,7 @@
             this.lineaDinamo.HeaderText = "Línea";
             this.lineaDinamo.MinimumWidth = 50;
             this.lineaDinamo.Name = "lineaDinamo";
+            this.lineaDinamo.ReadOnly = true;
             // 
             // marcaDina
             // 
@@ -772,6 +775,7 @@
             this.idLinea.HeaderText = "Línea";
             this.idLinea.MinimumWidth = 50;
             this.idLinea.Name = "idLinea";
+            this.idLinea.ReadOnly = true;
             // 
             // marcaMicro
             // 
@@ -827,6 +831,7 @@
             this.idLineaOpa.HeaderText = "Línea";
             this.idLineaOpa.MinimumWidth = 50;
             this.idLineaOpa.Name = "idLineaOpa";
+            this.idLineaOpa.ReadOnly = true;
             // 
             // marcaOpa
             // 
@@ -875,6 +880,7 @@
             this.idLineaTaco.HeaderText = "Línea";
             this.idLineaTaco.MinimumWidth = 50;
             this.idLineaTaco.Name = "idLineaTaco";
+            this.idLineaTaco.ReadOnly = true;
             // 
             // tipoTaco
             // 

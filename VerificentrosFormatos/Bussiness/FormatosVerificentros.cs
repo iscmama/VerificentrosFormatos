@@ -34,5 +34,28 @@ namespace VerificentrosFormatos.Bussiness
                 throw ex;
             }
         }
+        public static void GenerarFormatoAlta(string numeroCentro)
+        {
+            try
+            {
+                var verificentros = new List<VerificentrosDTO>();
+                verificentros.Add(VerificentrosManagement.GetByNumero(numeroCentro));
+
+                if (verificentros.Count > 0)
+                {
+                    Reporting.GenerarFormatos(verificentros, 1, true, true, true, true);
+                    MessageBox.Show("La creación de los formatos se realizo exitosamente.", "Verificentros App");
+                }
+                else
+                {
+                    MessageBox.Show("No se encontraron registros para procesar. Intente mas tarde.", "Verificentros App");
+                }
+            }
+            catch (Exception ex)
+            {
+                LogErrores.Write("Error en GenerarFormatoAlta() de FormatosVerificentros.", ex);
+                throw ex;
+            }
+        }
     }
 }

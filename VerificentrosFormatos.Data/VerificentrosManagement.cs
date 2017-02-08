@@ -70,6 +70,50 @@ namespace VerificentrosFormatos.Data
                 throw ex;
             }
         }
+        public static VerificentrosDTO GetByNumero(string numeroCentro)
+        {
+            try
+            {
+                using (var context = new VerificentrosDB())
+                {
+                    var verificentro = (from v in context.Verificentros
+                                         where v.numeroCentro == numeroCentro
+                                         select new VerificentrosDTO()
+                                         {
+                                             idVerificentro = v.idVerificentro,
+                                             numeroCentro = v.numeroCentro,
+                                             siglas = v.siglas,
+                                             razonSocial = v.razonSocial,
+                                             total = v.total,
+                                             fechaAlta = v.fechaAlta,
+                                             idUsuarioAlta = v.idUsuarioAlta,
+                                             Lineas =
+                                                        (
+                                                            from l in context.Lineas
+                                                            where l.idVerificentro == v.idVerificentro
+                                                            select new LineasDTO()
+                                                            {
+                                                                idLinea = l.idLinea,
+                                                                idVerificentro = l.idVerificentro,
+                                                                numero = l.numero,
+                                                                combustible = l.combustible,
+                                                                tipo = l.tipo,
+                                                                fechaAlta = l.fechaAlta,
+                                                                idUsuarioAlta = l.idUsuarioAlta
+                                                            }
+                                                        ).ToList()
+                                         }
+                    ).FirstOrDefault();
+
+                    return verificentro;
+                }
+            }
+            catch (Exception ex)
+            {
+                LogErrores.Write("Error en GetByNumero() de VerificentrosManagement.", ex);
+                throw ex;
+            }
+        }
         public static DataTable GetReporte(string numeroCentro, string linea)
         {
             try

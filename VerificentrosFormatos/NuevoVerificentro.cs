@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using VerificentrosFormatos.Data;
+using VerificentrosFormatos.Bussiness;
+using System.Diagnostics;
+using System.Configuration;
 
 namespace VerificentrosFormatos
 {
@@ -22,8 +25,6 @@ namespace VerificentrosFormatos
         {
             try
             {
-
-
                 if (string.IsNullOrEmpty(numeroCentro.Text))
                 {
                     MessageBox.Show("Proporcione el numero de centro", "Verificentros App");
@@ -57,6 +58,36 @@ namespace VerificentrosFormatos
                 if (dgvGabinetes.Rows.Count == 0)
                 {
                     MessageBox.Show("Debe proporcionar al menos 1 Gabinete", "Verificentros App");
+                    return;
+                }
+
+                if (dgvLineas.Rows.Count != dgvGabinetes.Rows.Count)
+                {
+                    MessageBox.Show("El total de Gabinetes debe coincidir con el total de Lineas, verifique.", "Verificentros App");
+                    return;
+                }
+
+                if (dgvDinamometros.Rows.Count > 0 && dgvLineas.Rows.Count != dgvDinamometros.Rows.Count)
+                {
+                    MessageBox.Show("El total de Dinamometros debe coincidir con el total de Lineas, verifique.", "Verificentros App");
+                    return;
+                }
+
+                if (dvgMicrobancas.Rows.Count > 0 && dgvLineas.Rows.Count != dvgMicrobancas.Rows.Count)
+                {
+                    MessageBox.Show("El total de Microbancas debe coincidir con el total de Lineas, verifique.", "Verificentros App");
+                    return;
+                }
+
+                if (dgvOpacimetros.Rows.Count > 0 && dgvLineas.Rows.Count != dgvOpacimetros.Rows.Count)
+                {
+                    MessageBox.Show("El total de Opacimetros debe coincidir con el total de Lineas, verifique.", "Verificentros App");
+                    return;
+                }
+
+                if (dgvTacometros.Rows.Count > 0 && dgvLineas.Rows.Count != dgvTacometros.Rows.Count)
+                {
+                    MessageBox.Show("El total de Tacometros debe coincidir con el total de Lineas, verifique.", "Verificentros App");
                     return;
                 }
 
@@ -201,10 +232,10 @@ namespace VerificentrosFormatos
                         fechaAlta = DateTime.Now,
                         idUsuarioAlta = 1,
                         Gabinetes = gabinetes,
-                        Dinamometros = dinamometros,
-                        Microbancas = microbancas,
-                        Opacimetros = opacimetros,
-                        Tacometros = tacometros
+                        Dinamometros = dinamometros.Count == 0 ? null : dinamometros,
+                        Microbancas = microbancas.Count == 0 ? null : microbancas,
+                        Opacimetros = opacimetros.Count == 0 ? null : opacimetros,
+                        Tacometros = tacometros.Count == 0 ? null : tacometros
                     }
                     );
                 }
@@ -225,7 +256,10 @@ namespace VerificentrosFormatos
 
                 if (resultado > 0)
                 {
+                    FormatosVerificentros.GenerarFormatoAlta(numeroCentro.Text);
+                    string pathPrints = ConfigurationManager.AppSettings["pathPrints"].ToString();
                     MessageBox.Show("La creación del Verificentro se realizo exitosamente", "Verificentros App");
+                    Process.Start(pathPrints);
                 }
                 else
                 {
@@ -240,9 +274,10 @@ namespace VerificentrosFormatos
             {
                 LogErrores.Write("Error en btnGuardar_Click() de NuevoVerificentro.", ex);
                 MessageBox.Show("Ocurrio un error al intentar crear el Verificentro. Intente mas tarde.", "Verificentros App");
-                this.Hide();
-                Bienvenida inicio = new Bienvenida();
-                inicio.Show();
+
+                //this.Hide();
+                //Bienvenida inicio = new Bienvenida();
+                //inicio.Show();
             }
         }
 
@@ -282,6 +317,16 @@ namespace VerificentrosFormatos
             if (e.ColumnIndex == 0)
             {
                 dgvLineas.Rows.RemoveAt(e.RowIndex);
+
+                int i = 1;
+
+                foreach (DataGridViewRow row in dgvLineas.Rows)
+                {
+                    row.Cells[1].Value = (i).ToString();
+                    i++;
+                }
+
+                totalLineas.Text = dgvLineas.Rows.Count.ToString();
             }
         }
 
@@ -299,6 +344,14 @@ namespace VerificentrosFormatos
             if (e.ColumnIndex == 0)
             {
                 dgvTacometros.Rows.RemoveAt(e.RowIndex);
+
+                int i = 1;
+
+                foreach (DataGridViewRow row in dgvTacometros.Rows)
+                {
+                    row.Cells[1].Value = (i).ToString();
+                    i++;
+                }
             }
         }
 
@@ -315,6 +368,14 @@ namespace VerificentrosFormatos
             if (e.ColumnIndex == 0)
             {
                 dgvOpacimetros.Rows.RemoveAt(e.RowIndex);
+
+                int i = 1;
+
+                foreach (DataGridViewRow row in dgvOpacimetros.Rows)
+                {
+                    row.Cells[1].Value = (i).ToString();
+                    i++;
+                }
             }
         }
 
@@ -339,6 +400,14 @@ namespace VerificentrosFormatos
             if (e.ColumnIndex == 0)
             {
                 dvgMicrobancas.Rows.RemoveAt(e.RowIndex);
+
+                int i = 1;
+
+                foreach (DataGridViewRow row in dvgMicrobancas.Rows)
+                {
+                    row.Cells[1].Value = (i).ToString();
+                    i++;
+                }
             }
         }
 
@@ -355,6 +424,14 @@ namespace VerificentrosFormatos
             if (e.ColumnIndex == 0)
             {
                 dgvDinamometros.Rows.RemoveAt(e.RowIndex);
+
+                int i = 1;
+
+                foreach (DataGridViewRow row in dgvDinamometros.Rows)
+                {
+                    row.Cells[1].Value = (i).ToString();
+                    i++;
+                }
             }
         }
 
@@ -371,6 +448,14 @@ namespace VerificentrosFormatos
             if (e.ColumnIndex == 0)
             {
                 dgvGabinetes.Rows.RemoveAt(e.RowIndex);
+
+                int i = 1;
+
+                foreach (DataGridViewRow row in dgvGabinetes.Rows)
+                {
+                    row.Cells[1].Value = (i).ToString();
+                    i++;
+                }
             }
         }
     }
