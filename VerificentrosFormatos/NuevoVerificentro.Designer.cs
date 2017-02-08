@@ -33,53 +33,64 @@
             this.label1 = new System.Windows.Forms.Label();
             this.numeroCentro = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.totalLineas = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.siglas = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.razonSocial = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnAgregarRepresentante = new System.Windows.Forms.Button();
             this.dgvRepresentantes = new System.Windows.Forms.DataGridView();
-            this.nombres = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apPaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apMaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabRepresentantes = new System.Windows.Forms.TabPage();
             this.tabLineas = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnAgregarLineas = new System.Windows.Forms.Button();
             this.dgvLineas = new System.Windows.Forms.DataGridView();
-            this.numeroLinea = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.combustible = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.tipo = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.tabGabinetes = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAgregarGabinete = new System.Windows.Forms.Button();
             this.dgvGabinetes = new System.Windows.Forms.DataGridView();
+            this.tabDinamometros = new System.Windows.Forms.TabPage();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btnAgregarDina = new System.Windows.Forms.Button();
+            this.dgvDinamometros = new System.Windows.Forms.DataGridView();
+            this.tabMicrobancas = new System.Windows.Forms.TabPage();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.dvgMicrobancas = new System.Windows.Forms.DataGridView();
+            this.btnAgregarMicro = new System.Windows.Forms.Button();
+            this.tabOpacimetros = new System.Windows.Forms.TabPage();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.dgvOpacimetros = new System.Windows.Forms.DataGridView();
+            this.btnAgregarOpa = new System.Windows.Forms.Button();
+            this.tabTacometros = new System.Windows.Forms.TabPage();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.dgvTacometros = new System.Windows.Forms.DataGridView();
+            this.btnAgregarTaco = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.eliminaRepresentante = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.nombres = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apPaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apMaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.numeroLinea = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.combustible = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eliminarGabinete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.linea = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.serie = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaInstalacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabDinamometros = new System.Windows.Forms.TabPage();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.dgvDinamometros = new System.Windows.Forms.DataGridView();
+            this.eliminarDina = new System.Windows.Forms.DataGridViewButtonColumn();
             this.lineaDinamo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.marcaDina = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modeloDina = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.serieDina = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaInstalacionDina = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.tabMicrobancas = new System.Windows.Forms.TabPage();
-            this.tabOpacimetros = new System.Windows.Forms.TabPage();
-            this.tabTacometros = new System.Windows.Forms.TabPage();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.eliminarmicro = new System.Windows.Forms.DataGridViewButtonColumn();
             this.idLinea = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.marcaMicro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modeloMicro = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -87,18 +98,14 @@
             this.serieMicro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaInstalacionMicro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numeroFacturaMicro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button5 = new System.Windows.Forms.Button();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.eliminarOpa = new System.Windows.Forms.DataGridViewButtonColumn();
             this.idLineaOpa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.marcaOpa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modeloOpa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.serieOpa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaInstalacionOpa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numeroFacturaOpa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.elimniarTaco = new System.Windows.Forms.DataGridViewButtonColumn();
             this.idLineaTaco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoTaco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.marcaTaco = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -121,14 +128,14 @@
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDinamometros)).BeginInit();
             this.tabMicrobancas.SuspendLayout();
-            this.tabOpacimetros.SuspendLayout();
-            this.tabTacometros.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgMicrobancas)).BeginInit();
+            this.tabOpacimetros.SuspendLayout();
             this.groupBox7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOpacimetros)).BeginInit();
+            this.tabTacometros.SuspendLayout();
             this.groupBox8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTacometros)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -143,13 +150,14 @@
             // numeroCentro
             // 
             this.numeroCentro.Location = new System.Drawing.Point(140, 30);
+            this.numeroCentro.MaxLength = 100;
             this.numeroCentro.Name = "numeroCentro";
             this.numeroCentro.Size = new System.Drawing.Size(211, 22);
             this.numeroCentro.TabIndex = 1;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.totalLineas);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.siglas);
             this.groupBox1.Controls.Add(this.label3);
@@ -159,17 +167,19 @@
             this.groupBox1.Controls.Add(this.numeroCentro);
             this.groupBox1.Location = new System.Drawing.Point(12, 22);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(433, 206);
+            this.groupBox1.Size = new System.Drawing.Size(740, 206);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Verificentro";
             // 
-            // textBox1
+            // totalLineas
             // 
-            this.textBox1.Location = new System.Drawing.Point(140, 153);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 7;
+            this.totalLineas.Enabled = false;
+            this.totalLineas.Location = new System.Drawing.Point(140, 153);
+            this.totalLineas.MaxLength = 5;
+            this.totalLineas.Name = "totalLineas";
+            this.totalLineas.Size = new System.Drawing.Size(100, 22);
+            this.totalLineas.TabIndex = 7;
             // 
             // label4
             // 
@@ -183,8 +193,9 @@
             // siglas
             // 
             this.siglas.Location = new System.Drawing.Point(140, 111);
+            this.siglas.MaxLength = 4;
             this.siglas.Name = "siglas";
-            this.siglas.Size = new System.Drawing.Size(133, 22);
+            this.siglas.Size = new System.Drawing.Size(100, 22);
             this.siglas.TabIndex = 5;
             // 
             // label3
@@ -199,8 +210,9 @@
             // razonSocial
             // 
             this.razonSocial.Location = new System.Drawing.Point(140, 70);
+            this.razonSocial.MaxLength = 1000;
             this.razonSocial.Name = "razonSocial";
-            this.razonSocial.Size = new System.Drawing.Size(271, 22);
+            this.razonSocial.Size = new System.Drawing.Size(392, 22);
             this.razonSocial.TabIndex = 3;
             // 
             // label2
@@ -214,29 +226,32 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Controls.Add(this.btnAgregarRepresentante);
             this.groupBox2.Controls.Add(this.dgvRepresentantes);
             this.groupBox2.Location = new System.Drawing.Point(16, 8);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1081, 442);
+            this.groupBox2.Size = new System.Drawing.Size(1476, 442);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             // 
-            // button3
+            // btnAgregarRepresentante
             // 
-            this.button3.BackColor = System.Drawing.Color.Navy;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(12, 21);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(117, 33);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Agregar";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnAgregarRepresentante.BackColor = System.Drawing.Color.Navy;
+            this.btnAgregarRepresentante.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarRepresentante.Location = new System.Drawing.Point(12, 21);
+            this.btnAgregarRepresentante.Name = "btnAgregarRepresentante";
+            this.btnAgregarRepresentante.Size = new System.Drawing.Size(117, 33);
+            this.btnAgregarRepresentante.TabIndex = 2;
+            this.btnAgregarRepresentante.Text = "Agregar";
+            this.btnAgregarRepresentante.UseVisualStyleBackColor = false;
+            this.btnAgregarRepresentante.Click += new System.EventHandler(this.btnAgregarRepresentante_Click);
             // 
             // dgvRepresentantes
             // 
+            this.dgvRepresentantes.AllowUserToAddRows = false;
             this.dgvRepresentantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRepresentantes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.eliminaRepresentante,
             this.nombres,
             this.apPaterno,
             this.apMaterno});
@@ -244,8 +259,373 @@
             this.dgvRepresentantes.Name = "dgvRepresentantes";
             this.dgvRepresentantes.RowHeadersWidth = 40;
             this.dgvRepresentantes.RowTemplate.Height = 24;
-            this.dgvRepresentantes.Size = new System.Drawing.Size(936, 349);
+            this.dgvRepresentantes.Size = new System.Drawing.Size(1202, 349);
             this.dgvRepresentantes.TabIndex = 0;
+            this.dgvRepresentantes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRepresentantes_CellClick);
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabRepresentantes);
+            this.tabControl1.Controls.Add(this.tabLineas);
+            this.tabControl1.Controls.Add(this.tabGabinetes);
+            this.tabControl1.Controls.Add(this.tabDinamometros);
+            this.tabControl1.Controls.Add(this.tabMicrobancas);
+            this.tabControl1.Controls.Add(this.tabOpacimetros);
+            this.tabControl1.Controls.Add(this.tabTacometros);
+            this.tabControl1.Location = new System.Drawing.Point(12, 247);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1550, 508);
+            this.tabControl1.TabIndex = 4;
+            // 
+            // tabRepresentantes
+            // 
+            this.tabRepresentantes.Controls.Add(this.groupBox2);
+            this.tabRepresentantes.Location = new System.Drawing.Point(4, 25);
+            this.tabRepresentantes.Name = "tabRepresentantes";
+            this.tabRepresentantes.Padding = new System.Windows.Forms.Padding(3);
+            this.tabRepresentantes.Size = new System.Drawing.Size(1542, 479);
+            this.tabRepresentantes.TabIndex = 0;
+            this.tabRepresentantes.Text = "Representantes legales";
+            this.tabRepresentantes.UseVisualStyleBackColor = true;
+            // 
+            // tabLineas
+            // 
+            this.tabLineas.Controls.Add(this.groupBox3);
+            this.tabLineas.Location = new System.Drawing.Point(4, 25);
+            this.tabLineas.Name = "tabLineas";
+            this.tabLineas.Padding = new System.Windows.Forms.Padding(3);
+            this.tabLineas.Size = new System.Drawing.Size(1542, 479);
+            this.tabLineas.TabIndex = 1;
+            this.tabLineas.Text = "Líneas";
+            this.tabLineas.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.btnAgregarLineas);
+            this.groupBox3.Controls.Add(this.dgvLineas);
+            this.groupBox3.Location = new System.Drawing.Point(15, 6);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(1218, 439);
+            this.groupBox3.TabIndex = 0;
+            this.groupBox3.TabStop = false;
+            // 
+            // btnAgregarLineas
+            // 
+            this.btnAgregarLineas.BackColor = System.Drawing.Color.Navy;
+            this.btnAgregarLineas.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarLineas.Location = new System.Drawing.Point(17, 21);
+            this.btnAgregarLineas.Name = "btnAgregarLineas";
+            this.btnAgregarLineas.Size = new System.Drawing.Size(117, 33);
+            this.btnAgregarLineas.TabIndex = 1;
+            this.btnAgregarLineas.Text = "Agregar";
+            this.btnAgregarLineas.UseVisualStyleBackColor = false;
+            this.btnAgregarLineas.Click += new System.EventHandler(this.btnAgregarLineas_Click);
+            // 
+            // dgvLineas
+            // 
+            this.dgvLineas.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Teal;
+            this.dgvLineas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvLineas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLineas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Eliminar,
+            this.numeroLinea,
+            this.combustible,
+            this.tipo});
+            this.dgvLineas.Location = new System.Drawing.Point(17, 60);
+            this.dgvLineas.Name = "dgvLineas";
+            this.dgvLineas.RowTemplate.Height = 24;
+            this.dgvLineas.Size = new System.Drawing.Size(933, 329);
+            this.dgvLineas.TabIndex = 0;
+            this.dgvLineas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLineas_CellClick);
+            // 
+            // tabGabinetes
+            // 
+            this.tabGabinetes.Controls.Add(this.groupBox4);
+            this.tabGabinetes.Location = new System.Drawing.Point(4, 25);
+            this.tabGabinetes.Name = "tabGabinetes";
+            this.tabGabinetes.Size = new System.Drawing.Size(1542, 479);
+            this.tabGabinetes.TabIndex = 2;
+            this.tabGabinetes.Text = "Gabinetes";
+            this.tabGabinetes.UseVisualStyleBackColor = true;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.btnAgregarGabinete);
+            this.groupBox4.Controls.Add(this.dgvGabinetes);
+            this.groupBox4.Location = new System.Drawing.Point(3, 13);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(1501, 429);
+            this.groupBox4.TabIndex = 0;
+            this.groupBox4.TabStop = false;
+            // 
+            // btnAgregarGabinete
+            // 
+            this.btnAgregarGabinete.BackColor = System.Drawing.Color.Navy;
+            this.btnAgregarGabinete.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarGabinete.Location = new System.Drawing.Point(7, 21);
+            this.btnAgregarGabinete.Name = "btnAgregarGabinete";
+            this.btnAgregarGabinete.Size = new System.Drawing.Size(117, 33);
+            this.btnAgregarGabinete.TabIndex = 2;
+            this.btnAgregarGabinete.Text = "Agregar";
+            this.btnAgregarGabinete.UseVisualStyleBackColor = false;
+            this.btnAgregarGabinete.Click += new System.EventHandler(this.btnAgregarGabinete_Click);
+            // 
+            // dgvGabinetes
+            // 
+            this.dgvGabinetes.AllowUserToAddRows = false;
+            this.dgvGabinetes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGabinetes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.eliminarGabinete,
+            this.linea,
+            this.marca,
+            this.modelo,
+            this.serie,
+            this.fechaInstalacion});
+            this.dgvGabinetes.Location = new System.Drawing.Point(7, 60);
+            this.dgvGabinetes.Name = "dgvGabinetes";
+            this.dgvGabinetes.RowTemplate.Height = 24;
+            this.dgvGabinetes.Size = new System.Drawing.Size(1181, 278);
+            this.dgvGabinetes.TabIndex = 0;
+            this.dgvGabinetes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGabinetes_CellClick);
+            // 
+            // tabDinamometros
+            // 
+            this.tabDinamometros.Controls.Add(this.groupBox5);
+            this.tabDinamometros.Location = new System.Drawing.Point(4, 25);
+            this.tabDinamometros.Name = "tabDinamometros";
+            this.tabDinamometros.Size = new System.Drawing.Size(1542, 479);
+            this.tabDinamometros.TabIndex = 3;
+            this.tabDinamometros.Text = "Dinamometros";
+            this.tabDinamometros.UseVisualStyleBackColor = true;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.btnAgregarDina);
+            this.groupBox5.Controls.Add(this.dgvDinamometros);
+            this.groupBox5.Location = new System.Drawing.Point(3, 14);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(1445, 435);
+            this.groupBox5.TabIndex = 0;
+            this.groupBox5.TabStop = false;
+            // 
+            // btnAgregarDina
+            // 
+            this.btnAgregarDina.BackColor = System.Drawing.Color.Navy;
+            this.btnAgregarDina.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarDina.Location = new System.Drawing.Point(10, 21);
+            this.btnAgregarDina.Name = "btnAgregarDina";
+            this.btnAgregarDina.Size = new System.Drawing.Size(117, 33);
+            this.btnAgregarDina.TabIndex = 2;
+            this.btnAgregarDina.Text = "Agregar";
+            this.btnAgregarDina.UseVisualStyleBackColor = false;
+            this.btnAgregarDina.Click += new System.EventHandler(this.btnAgregarDina_Click);
+            // 
+            // dgvDinamometros
+            // 
+            this.dgvDinamometros.AllowUserToAddRows = false;
+            this.dgvDinamometros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDinamometros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.eliminarDina,
+            this.lineaDinamo,
+            this.marcaDina,
+            this.modeloDina,
+            this.serieDina,
+            this.fechaInstalacionDina});
+            this.dgvDinamometros.Location = new System.Drawing.Point(12, 60);
+            this.dgvDinamometros.Name = "dgvDinamometros";
+            this.dgvDinamometros.RowTemplate.Height = 24;
+            this.dgvDinamometros.Size = new System.Drawing.Size(1346, 344);
+            this.dgvDinamometros.TabIndex = 0;
+            this.dgvDinamometros.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDinamometros_CellClick);
+            // 
+            // tabMicrobancas
+            // 
+            this.tabMicrobancas.Controls.Add(this.groupBox6);
+            this.tabMicrobancas.Location = new System.Drawing.Point(4, 25);
+            this.tabMicrobancas.Name = "tabMicrobancas";
+            this.tabMicrobancas.Size = new System.Drawing.Size(1542, 479);
+            this.tabMicrobancas.TabIndex = 4;
+            this.tabMicrobancas.Text = "Microbancas";
+            this.tabMicrobancas.UseVisualStyleBackColor = true;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.dvgMicrobancas);
+            this.groupBox6.Controls.Add(this.btnAgregarMicro);
+            this.groupBox6.Location = new System.Drawing.Point(15, 17);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(1493, 451);
+            this.groupBox6.TabIndex = 0;
+            this.groupBox6.TabStop = false;
+            // 
+            // dvgMicrobancas
+            // 
+            this.dvgMicrobancas.AllowUserToAddRows = false;
+            this.dvgMicrobancas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgMicrobancas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.eliminarmicro,
+            this.idLinea,
+            this.marcaMicro,
+            this.modeloMicro,
+            this.versionMicro,
+            this.serieMicro,
+            this.fechaInstalacionMicro,
+            this.numeroFacturaMicro});
+            this.dvgMicrobancas.Location = new System.Drawing.Point(7, 64);
+            this.dvgMicrobancas.Name = "dvgMicrobancas";
+            this.dvgMicrobancas.RowTemplate.Height = 24;
+            this.dvgMicrobancas.Size = new System.Drawing.Size(1466, 363);
+            this.dvgMicrobancas.TabIndex = 1;
+            this.dvgMicrobancas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgMicrobancas_CellClick);
+            // 
+            // btnAgregarMicro
+            // 
+            this.btnAgregarMicro.BackColor = System.Drawing.Color.Navy;
+            this.btnAgregarMicro.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarMicro.Location = new System.Drawing.Point(21, 22);
+            this.btnAgregarMicro.Name = "btnAgregarMicro";
+            this.btnAgregarMicro.Size = new System.Drawing.Size(110, 37);
+            this.btnAgregarMicro.TabIndex = 0;
+            this.btnAgregarMicro.Text = "Agregar";
+            this.btnAgregarMicro.UseVisualStyleBackColor = false;
+            this.btnAgregarMicro.Click += new System.EventHandler(this.btnAgregarMicro_Click);
+            // 
+            // tabOpacimetros
+            // 
+            this.tabOpacimetros.Controls.Add(this.groupBox7);
+            this.tabOpacimetros.Location = new System.Drawing.Point(4, 25);
+            this.tabOpacimetros.Name = "tabOpacimetros";
+            this.tabOpacimetros.Size = new System.Drawing.Size(1542, 479);
+            this.tabOpacimetros.TabIndex = 5;
+            this.tabOpacimetros.Text = "Opacimetros";
+            this.tabOpacimetros.UseVisualStyleBackColor = true;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.dgvOpacimetros);
+            this.groupBox7.Controls.Add(this.btnAgregarOpa);
+            this.groupBox7.Location = new System.Drawing.Point(3, 15);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(1516, 441);
+            this.groupBox7.TabIndex = 1;
+            this.groupBox7.TabStop = false;
+            // 
+            // dgvOpacimetros
+            // 
+            this.dgvOpacimetros.AllowUserToAddRows = false;
+            this.dgvOpacimetros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOpacimetros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.eliminarOpa,
+            this.idLineaOpa,
+            this.marcaOpa,
+            this.modeloOpa,
+            this.serieOpa,
+            this.fechaInstalacionOpa,
+            this.numeroFacturaOpa});
+            this.dgvOpacimetros.Location = new System.Drawing.Point(8, 60);
+            this.dgvOpacimetros.Name = "dgvOpacimetros";
+            this.dgvOpacimetros.RowTemplate.Height = 24;
+            this.dgvOpacimetros.Size = new System.Drawing.Size(1410, 361);
+            this.dgvOpacimetros.TabIndex = 1;
+            this.dgvOpacimetros.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOpacimetros_CellClick);
+            // 
+            // btnAgregarOpa
+            // 
+            this.btnAgregarOpa.BackColor = System.Drawing.Color.Navy;
+            this.btnAgregarOpa.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarOpa.Location = new System.Drawing.Point(16, 21);
+            this.btnAgregarOpa.Name = "btnAgregarOpa";
+            this.btnAgregarOpa.Size = new System.Drawing.Size(117, 31);
+            this.btnAgregarOpa.TabIndex = 0;
+            this.btnAgregarOpa.Text = "Agregar";
+            this.btnAgregarOpa.UseVisualStyleBackColor = false;
+            this.btnAgregarOpa.Click += new System.EventHandler(this.btnAgregarOpa_Click);
+            // 
+            // tabTacometros
+            // 
+            this.tabTacometros.Controls.Add(this.groupBox8);
+            this.tabTacometros.Location = new System.Drawing.Point(4, 25);
+            this.tabTacometros.Name = "tabTacometros";
+            this.tabTacometros.Size = new System.Drawing.Size(1542, 479);
+            this.tabTacometros.TabIndex = 6;
+            this.tabTacometros.Text = "Tacometros";
+            this.tabTacometros.UseVisualStyleBackColor = true;
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.dgvTacometros);
+            this.groupBox8.Controls.Add(this.btnAgregarTaco);
+            this.groupBox8.Location = new System.Drawing.Point(8, 12);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(1510, 455);
+            this.groupBox8.TabIndex = 0;
+            this.groupBox8.TabStop = false;
+            // 
+            // dgvTacometros
+            // 
+            this.dgvTacometros.AllowUserToAddRows = false;
+            this.dgvTacometros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTacometros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.elimniarTaco,
+            this.idLineaTaco,
+            this.tipoTaco,
+            this.marcaTaco,
+            this.modeloTaco,
+            this.serieTaco,
+            this.fechaInstalacionTaco,
+            this.numeroFacturaTaco});
+            this.dgvTacometros.Location = new System.Drawing.Point(6, 66);
+            this.dgvTacometros.Name = "dgvTacometros";
+            this.dgvTacometros.RowTemplate.Height = 24;
+            this.dgvTacometros.Size = new System.Drawing.Size(1484, 371);
+            this.dgvTacometros.TabIndex = 1;
+            this.dgvTacometros.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTacometros_CellClick);
+            // 
+            // btnAgregarTaco
+            // 
+            this.btnAgregarTaco.BackColor = System.Drawing.Color.Navy;
+            this.btnAgregarTaco.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarTaco.Location = new System.Drawing.Point(18, 21);
+            this.btnAgregarTaco.Name = "btnAgregarTaco";
+            this.btnAgregarTaco.Size = new System.Drawing.Size(137, 37);
+            this.btnAgregarTaco.TabIndex = 0;
+            this.btnAgregarTaco.Text = "Agregar";
+            this.btnAgregarTaco.UseVisualStyleBackColor = false;
+            this.btnAgregarTaco.Click += new System.EventHandler(this.btnAgregarTaco_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.Red;
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar.Location = new System.Drawing.Point(795, 66);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(145, 38);
+            this.btnGuardar.TabIndex = 5;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.BackColor = System.Drawing.Color.Gray;
+            this.btnSalir.ForeColor = System.Drawing.Color.White;
+            this.btnSalir.Location = new System.Drawing.Point(946, 66);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(145, 39);
+            this.btnSalir.TabIndex = 6;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // eliminaRepresentante
+            // 
+            this.eliminaRepresentante.HeaderText = "Eliminar";
+            this.eliminaRepresentante.MinimumWidth = 100;
+            this.eliminaRepresentante.Name = "eliminaRepresentante";
+            this.eliminaRepresentante.Text = "Eliminar";
+            this.eliminaRepresentante.UseColumnTextForButtonValue = true;
             // 
             // nombres
             // 
@@ -268,78 +648,12 @@
             this.apMaterno.Name = "apMaterno";
             this.apMaterno.Width = 200;
             // 
-            // tabControl1
+            // Eliminar
             // 
-            this.tabControl1.Controls.Add(this.tabRepresentantes);
-            this.tabControl1.Controls.Add(this.tabLineas);
-            this.tabControl1.Controls.Add(this.tabGabinetes);
-            this.tabControl1.Controls.Add(this.tabDinamometros);
-            this.tabControl1.Controls.Add(this.tabMicrobancas);
-            this.tabControl1.Controls.Add(this.tabOpacimetros);
-            this.tabControl1.Controls.Add(this.tabTacometros);
-            this.tabControl1.Location = new System.Drawing.Point(12, 247);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1111, 508);
-            this.tabControl1.TabIndex = 4;
-            // 
-            // tabRepresentantes
-            // 
-            this.tabRepresentantes.Controls.Add(this.groupBox2);
-            this.tabRepresentantes.Location = new System.Drawing.Point(4, 25);
-            this.tabRepresentantes.Name = "tabRepresentantes";
-            this.tabRepresentantes.Padding = new System.Windows.Forms.Padding(3);
-            this.tabRepresentantes.Size = new System.Drawing.Size(1103, 479);
-            this.tabRepresentantes.TabIndex = 0;
-            this.tabRepresentantes.Text = "Representantes legales";
-            this.tabRepresentantes.UseVisualStyleBackColor = true;
-            // 
-            // tabLineas
-            // 
-            this.tabLineas.Controls.Add(this.groupBox3);
-            this.tabLineas.Location = new System.Drawing.Point(4, 25);
-            this.tabLineas.Name = "tabLineas";
-            this.tabLineas.Padding = new System.Windows.Forms.Padding(3);
-            this.tabLineas.Size = new System.Drawing.Size(1103, 479);
-            this.tabLineas.TabIndex = 1;
-            this.tabLineas.Text = "Líneas";
-            this.tabLineas.UseVisualStyleBackColor = true;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.btnAgregar);
-            this.groupBox3.Controls.Add(this.dgvLineas);
-            this.groupBox3.Location = new System.Drawing.Point(15, 6);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1063, 439);
-            this.groupBox3.TabIndex = 0;
-            this.groupBox3.TabStop = false;
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.BackColor = System.Drawing.Color.Navy;
-            this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(17, 21);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(117, 33);
-            this.btnAgregar.TabIndex = 1;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = false;
-            // 
-            // dgvLineas
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Teal;
-            this.dgvLineas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvLineas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLineas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.numeroLinea,
-            this.combustible,
-            this.tipo});
-            this.dgvLineas.Location = new System.Drawing.Point(17, 60);
-            this.dgvLineas.Name = "dgvLineas";
-            this.dgvLineas.RowTemplate.Height = 24;
-            this.dgvLineas.Size = new System.Drawing.Size(1020, 329);
-            this.dgvLineas.TabIndex = 0;
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.Text = "Eliminar";
+            this.Eliminar.UseColumnTextForButtonValue = true;
             // 
             // numeroLinea
             // 
@@ -353,7 +667,6 @@
             this.combustible.MinimumWidth = 200;
             this.combustible.Name = "combustible";
             this.combustible.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.combustible.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.combustible.Width = 200;
             // 
             // tipo
@@ -361,53 +674,18 @@
             this.tipo.HeaderText = "Tipo";
             this.tipo.MinimumWidth = 200;
             this.tipo.Name = "tipo";
+            this.tipo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.tipo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.tipo.Width = 200;
             // 
-            // tabGabinetes
+            // eliminarGabinete
             // 
-            this.tabGabinetes.Controls.Add(this.groupBox4);
-            this.tabGabinetes.Location = new System.Drawing.Point(4, 25);
-            this.tabGabinetes.Name = "tabGabinetes";
-            this.tabGabinetes.Size = new System.Drawing.Size(1103, 479);
-            this.tabGabinetes.TabIndex = 2;
-            this.tabGabinetes.Text = "Gabinetes";
-            this.tabGabinetes.UseVisualStyleBackColor = true;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.button1);
-            this.groupBox4.Controls.Add(this.dgvGabinetes);
-            this.groupBox4.Location = new System.Drawing.Point(3, 13);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(1076, 429);
-            this.groupBox4.TabIndex = 0;
-            this.groupBox4.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Navy;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(7, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 33);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // dgvGabinetes
-            // 
-            this.dgvGabinetes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGabinetes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.linea,
-            this.marca,
-            this.modelo,
-            this.serie,
-            this.fechaInstalacion});
-            this.dgvGabinetes.Location = new System.Drawing.Point(7, 60);
-            this.dgvGabinetes.Name = "dgvGabinetes";
-            this.dgvGabinetes.RowTemplate.Height = 24;
-            this.dgvGabinetes.Size = new System.Drawing.Size(992, 278);
-            this.dgvGabinetes.TabIndex = 0;
+            this.eliminarGabinete.HeaderText = "Eliminar";
+            this.eliminarGabinete.Name = "eliminarGabinete";
+            this.eliminarGabinete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.eliminarGabinete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.eliminarGabinete.Text = "Eliminar";
+            this.eliminarGabinete.UseColumnTextForButtonValue = true;
             // 
             // linea
             // 
@@ -442,51 +720,12 @@
             this.fechaInstalacion.Name = "fechaInstalacion";
             this.fechaInstalacion.Width = 150;
             // 
-            // tabDinamometros
+            // eliminarDina
             // 
-            this.tabDinamometros.Controls.Add(this.groupBox5);
-            this.tabDinamometros.Location = new System.Drawing.Point(4, 25);
-            this.tabDinamometros.Name = "tabDinamometros";
-            this.tabDinamometros.Size = new System.Drawing.Size(1103, 479);
-            this.tabDinamometros.TabIndex = 3;
-            this.tabDinamometros.Text = "Dinamometros";
-            this.tabDinamometros.UseVisualStyleBackColor = true;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.button2);
-            this.groupBox5.Controls.Add(this.dgvDinamometros);
-            this.groupBox5.Location = new System.Drawing.Point(3, 14);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(986, 435);
-            this.groupBox5.TabIndex = 0;
-            this.groupBox5.TabStop = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Navy;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(10, 21);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(117, 33);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Agregar";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // dgvDinamometros
-            // 
-            this.dgvDinamometros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDinamometros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.lineaDinamo,
-            this.marcaDina,
-            this.modeloDina,
-            this.serieDina,
-            this.fechaInstalacionDina});
-            this.dgvDinamometros.Location = new System.Drawing.Point(12, 60);
-            this.dgvDinamometros.Name = "dgvDinamometros";
-            this.dgvDinamometros.RowTemplate.Height = 24;
-            this.dgvDinamometros.Size = new System.Drawing.Size(949, 344);
-            this.dgvDinamometros.TabIndex = 0;
+            this.eliminarDina.HeaderText = "Eliminar";
+            this.eliminarDina.Name = "eliminarDina";
+            this.eliminarDina.Text = "Eliminar";
+            this.eliminarDina.UseColumnTextForButtonValue = true;
             // 
             // lineaDinamo
             // 
@@ -521,97 +760,12 @@
             this.fechaInstalacionDina.Name = "fechaInstalacionDina";
             this.fechaInstalacionDina.Width = 150;
             // 
-            // btnGuardar
+            // eliminarmicro
             // 
-            this.btnGuardar.BackColor = System.Drawing.Color.Red;
-            this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(495, 75);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(145, 38);
-            this.btnGuardar.TabIndex = 5;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.BackColor = System.Drawing.Color.Gray;
-            this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.Location = new System.Drawing.Point(646, 75);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(145, 39);
-            this.btnSalir.TabIndex = 6;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // tabMicrobancas
-            // 
-            this.tabMicrobancas.Controls.Add(this.groupBox6);
-            this.tabMicrobancas.Location = new System.Drawing.Point(4, 25);
-            this.tabMicrobancas.Name = "tabMicrobancas";
-            this.tabMicrobancas.Size = new System.Drawing.Size(1103, 479);
-            this.tabMicrobancas.TabIndex = 4;
-            this.tabMicrobancas.Text = "Microbancas";
-            this.tabMicrobancas.UseVisualStyleBackColor = true;
-            // 
-            // tabOpacimetros
-            // 
-            this.tabOpacimetros.Controls.Add(this.groupBox7);
-            this.tabOpacimetros.Location = new System.Drawing.Point(4, 25);
-            this.tabOpacimetros.Name = "tabOpacimetros";
-            this.tabOpacimetros.Size = new System.Drawing.Size(1103, 479);
-            this.tabOpacimetros.TabIndex = 5;
-            this.tabOpacimetros.Text = "Opacimetros";
-            this.tabOpacimetros.UseVisualStyleBackColor = true;
-            // 
-            // tabTacometros
-            // 
-            this.tabTacometros.Controls.Add(this.groupBox8);
-            this.tabTacometros.Location = new System.Drawing.Point(4, 25);
-            this.tabTacometros.Name = "tabTacometros";
-            this.tabTacometros.Size = new System.Drawing.Size(1103, 479);
-            this.tabTacometros.TabIndex = 6;
-            this.tabTacometros.Text = "Tacometros";
-            this.tabTacometros.UseVisualStyleBackColor = true;
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.dataGridView1);
-            this.groupBox6.Controls.Add(this.button4);
-            this.groupBox6.Location = new System.Drawing.Point(15, 17);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(1069, 451);
-            this.groupBox6.TabIndex = 0;
-            this.groupBox6.TabStop = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Navy;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(21, 22);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(110, 37);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "Agregar";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idLinea,
-            this.marcaMicro,
-            this.modeloMicro,
-            this.versionMicro,
-            this.serieMicro,
-            this.fechaInstalacionMicro,
-            this.numeroFacturaMicro});
-            this.dataGridView1.Location = new System.Drawing.Point(7, 64);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1046, 363);
-            this.dataGridView1.TabIndex = 1;
+            this.eliminarmicro.HeaderText = "Eliminar";
+            this.eliminarmicro.Name = "eliminarmicro";
+            this.eliminarmicro.Text = "Eliminar";
+            this.eliminarmicro.UseColumnTextForButtonValue = true;
             // 
             // idLinea
             // 
@@ -661,42 +815,12 @@
             this.numeroFacturaMicro.Name = "numeroFacturaMicro";
             this.numeroFacturaMicro.Width = 200;
             // 
-            // button5
+            // eliminarOpa
             // 
-            this.button5.BackColor = System.Drawing.Color.Navy;
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(16, 21);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(117, 31);
-            this.button5.TabIndex = 0;
-            this.button5.Text = "Agregar";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.dataGridView2);
-            this.groupBox7.Controls.Add(this.button5);
-            this.groupBox7.Location = new System.Drawing.Point(3, 15);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(1082, 441);
-            this.groupBox7.TabIndex = 1;
-            this.groupBox7.TabStop = false;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idLineaOpa,
-            this.marcaOpa,
-            this.modeloOpa,
-            this.serieOpa,
-            this.fechaInstalacionOpa,
-            this.numeroFacturaOpa});
-            this.dataGridView2.Location = new System.Drawing.Point(8, 60);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(1064, 361);
-            this.dataGridView2.TabIndex = 1;
+            this.eliminarOpa.HeaderText = "Eliminar";
+            this.eliminarOpa.Name = "eliminarOpa";
+            this.eliminarOpa.Text = "Eliminar";
+            this.eliminarOpa.UseColumnTextForButtonValue = true;
             // 
             // idLineaOpa
             // 
@@ -739,43 +863,12 @@
             this.numeroFacturaOpa.Name = "numeroFacturaOpa";
             this.numeroFacturaOpa.Width = 200;
             // 
-            // groupBox8
+            // elimniarTaco
             // 
-            this.groupBox8.Controls.Add(this.dataGridView3);
-            this.groupBox8.Controls.Add(this.button6);
-            this.groupBox8.Location = new System.Drawing.Point(8, 12);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(1080, 455);
-            this.groupBox8.TabIndex = 0;
-            this.groupBox8.TabStop = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Navy;
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(18, 21);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(137, 37);
-            this.button6.TabIndex = 0;
-            this.button6.Text = "Agregar";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idLineaTaco,
-            this.tipoTaco,
-            this.marcaTaco,
-            this.modeloTaco,
-            this.serieTaco,
-            this.fechaInstalacionTaco,
-            this.numeroFacturaTaco});
-            this.dataGridView3.Location = new System.Drawing.Point(6, 66);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(1061, 371);
-            this.dataGridView3.TabIndex = 1;
+            this.elimniarTaco.HeaderText = "Eliminar";
+            this.elimniarTaco.Name = "elimniarTaco";
+            this.elimniarTaco.Text = "Eliminar";
+            this.elimniarTaco.UseColumnTextForButtonValue = true;
             // 
             // idLineaTaco
             // 
@@ -829,7 +922,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1192, 779);
+            this.ClientSize = new System.Drawing.Size(1574, 779);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.tabControl1);
@@ -839,6 +932,7 @@
             this.Name = "NuevoVerificentro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo Verificentro";
+            this.Load += new System.EventHandler(this.NuevoVerificentro_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -855,14 +949,14 @@
             this.groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDinamometros)).EndInit();
             this.tabMicrobancas.ResumeLayout(false);
-            this.tabOpacimetros.ResumeLayout(false);
-            this.tabTacometros.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgMicrobancas)).EndInit();
+            this.tabOpacimetros.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOpacimetros)).EndInit();
+            this.tabTacometros.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTacometros)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -879,9 +973,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvRepresentantes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombres;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apPaterno;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apMaterno;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabRepresentantes;
         private System.Windows.Forms.TabPage tabLineas;
@@ -891,34 +982,48 @@
         private System.Windows.Forms.DataGridView dgvLineas;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DataGridView dgvGabinetes;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.DataGridView dgvDinamometros;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.TextBox totalLineas;
+        private System.Windows.Forms.Button btnAgregarLineas;
+        private System.Windows.Forms.Button btnAgregarGabinete;
+        private System.Windows.Forms.Button btnAgregarDina;
+        private System.Windows.Forms.Button btnAgregarRepresentante;
+        private System.Windows.Forms.TabPage tabMicrobancas;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Button btnAgregarMicro;
+        private System.Windows.Forms.TabPage tabOpacimetros;
+        private System.Windows.Forms.TabPage tabTacometros;
+        private System.Windows.Forms.DataGridView dvgMicrobancas;
+        private System.Windows.Forms.Button btnAgregarOpa;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.DataGridView dgvOpacimetros;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.Button btnAgregarTaco;
+        private System.Windows.Forms.DataGridView dgvTacometros;
+        private System.Windows.Forms.DataGridViewButtonColumn eliminaRepresentante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombres;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apPaterno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apMaterno;
+        private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numeroLinea;
+        private System.Windows.Forms.DataGridViewTextBoxColumn combustible;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipo;
+        private System.Windows.Forms.DataGridViewButtonColumn eliminarGabinete;
         private System.Windows.Forms.DataGridViewTextBoxColumn linea;
         private System.Windows.Forms.DataGridViewTextBoxColumn marca;
         private System.Windows.Forms.DataGridViewTextBoxColumn modelo;
         private System.Windows.Forms.DataGridViewTextBoxColumn serie;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaInstalacion;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.DataGridView dgvDinamometros;
+        private System.Windows.Forms.DataGridViewButtonColumn eliminarDina;
         private System.Windows.Forms.DataGridViewTextBoxColumn lineaDinamo;
         private System.Windows.Forms.DataGridViewTextBoxColumn marcaDina;
         private System.Windows.Forms.DataGridViewTextBoxColumn modeloDina;
         private System.Windows.Forms.DataGridViewTextBoxColumn serieDina;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaInstalacionDina;
-        private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numeroLinea;
-        private System.Windows.Forms.DataGridViewComboBoxColumn combustible;
-        private System.Windows.Forms.DataGridViewComboBoxColumn tipo;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TabPage tabMicrobancas;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TabPage tabOpacimetros;
-        private System.Windows.Forms.TabPage tabTacometros;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewButtonColumn eliminarmicro;
         private System.Windows.Forms.DataGridViewTextBoxColumn idLinea;
         private System.Windows.Forms.DataGridViewTextBoxColumn marcaMicro;
         private System.Windows.Forms.DataGridViewTextBoxColumn modeloMicro;
@@ -926,18 +1031,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn serieMicro;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaInstalacionMicro;
         private System.Windows.Forms.DataGridViewTextBoxColumn numeroFacturaMicro;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewButtonColumn eliminarOpa;
         private System.Windows.Forms.DataGridViewTextBoxColumn idLineaOpa;
         private System.Windows.Forms.DataGridViewTextBoxColumn marcaOpa;
         private System.Windows.Forms.DataGridViewTextBoxColumn modeloOpa;
         private System.Windows.Forms.DataGridViewTextBoxColumn serieOpa;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaInstalacionOpa;
         private System.Windows.Forms.DataGridViewTextBoxColumn numeroFacturaOpa;
-        private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridViewButtonColumn elimniarTaco;
         private System.Windows.Forms.DataGridViewTextBoxColumn idLineaTaco;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoTaco;
         private System.Windows.Forms.DataGridViewTextBoxColumn marcaTaco;
