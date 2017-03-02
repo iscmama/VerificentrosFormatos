@@ -24,24 +24,59 @@ namespace VerificentrosFormatos.Formatos
                     foreach (LineasDTO l in v.Lineas)
                     {
                         DataTable dtReporte = VerificentrosManagement.GetReporte(v.numeroCentro, l.numero);
-                        ReportDataSource dataSource = new ReportDataSource("dsReportes", dtReporte);
 
-                        if (dinamometros)
+                        if (dtReporte.Rows.Count > 1)
                         {
-                            GenerateReport("dinamometro.rdlc", dataSource, pathReports, pathPrints, v.numeroCentro, v.siglas, l.numero, tipo, dinamometros, microbancas, opacimetros, tacometros);
+                            foreach (DataRow row in dtReporte.Rows)
+                            {
+                                DataTable dtLinea = dtReporte.Copy();
+                                dtLinea.Clear();
+                                dtLinea.ImportRow(row);
+
+                                ReportDataSource dataSource = new ReportDataSource("dsReportes", dtLinea);
+
+                                if (dinamometros)
+                                {
+                                    GenerateReport("dinamometro.rdlc", dataSource, pathReports, pathPrints, v.numeroCentro, v.siglas, l.numero, tipo, dinamometros, microbancas, opacimetros, tacometros);
+                                }
+                                if (microbancas)
+                                {
+                                    GenerateReport("microbancas.rdlc", dataSource, pathReports, pathPrints, v.numeroCentro, v.siglas, l.numero, tipo, dinamometros, microbancas, opacimetros, tacometros);
+                                }
+                                if (opacimetros)
+                                {
+                                    GenerateReport("opacimetros.rdlc", dataSource, pathReports, pathPrints, v.numeroCentro, v.siglas, l.numero, tipo, dinamometros, microbancas, opacimetros, tacometros);
+                                }
+                                if (tacometros)
+                                {
+                                    GenerateReport("tacometros.rdlc", dataSource, pathReports, pathPrints, v.numeroCentro, v.siglas, l.numero, tipo, dinamometros, microbancas, opacimetros, tacometros);
+                                }
+                            }
+                           
                         }
-                        if (microbancas)
+                        else
                         {
-                            GenerateReport("microbancas.rdlc", dataSource, pathReports, pathPrints, v.numeroCentro, v.siglas, l.numero, tipo, dinamometros, microbancas, opacimetros, tacometros);
+                            ReportDataSource dataSource = new ReportDataSource("dsReportes", dtReporte);
+
+                            if (dinamometros)
+                            {
+                                GenerateReport("dinamometro.rdlc", dataSource, pathReports, pathPrints, v.numeroCentro, v.siglas, l.numero, tipo, dinamometros, microbancas, opacimetros, tacometros);
+                            }
+                            if (microbancas)
+                            {
+                                GenerateReport("microbancas.rdlc", dataSource, pathReports, pathPrints, v.numeroCentro, v.siglas, l.numero, tipo, dinamometros, microbancas, opacimetros, tacometros);
+                            }
+                            if (opacimetros)
+                            {
+                                GenerateReport("opacimetros.rdlc", dataSource, pathReports, pathPrints, v.numeroCentro, v.siglas, l.numero, tipo, dinamometros, microbancas, opacimetros, tacometros);
+                            }
+                            if (tacometros)
+                            {
+                                GenerateReport("tacometros.rdlc", dataSource, pathReports, pathPrints, v.numeroCentro, v.siglas, l.numero, tipo, dinamometros, microbancas, opacimetros, tacometros);
+                            }
                         }
-                        if (opacimetros)
-                        {
-                            GenerateReport("opacimetros.rdlc", dataSource, pathReports, pathPrints, v.numeroCentro, v.siglas, l.numero, tipo, dinamometros, microbancas, opacimetros, tacometros);
-                        }
-                        if (tacometros)
-                        {
-                            GenerateReport("tacometros.rdlc", dataSource, pathReports, pathPrints, v.numeroCentro, v.siglas, l.numero, tipo, dinamometros, microbancas, opacimetros, tacometros);
-                        }
+
+                      
                     }
                 }
             }
@@ -51,7 +86,7 @@ namespace VerificentrosFormatos.Formatos
                 throw ex;
             }
         }
-        private static void GenerateReport(string nameRTP, ReportDataSource dataSource, string pathReports, string pathPrints, string numeroCentro, string siglas, string linea, int tipo, bool dinamometros, bool microbancas, bool opacimetros, bool tacometros)
+        private static void GenerateReport(string nameRTP, ReportDataSource dataSource, string pathReports, string pathPrints, string numeroCentro, string siglas, int linea, int tipo, bool dinamometros, bool microbancas, bool opacimetros, bool tacometros)
         {
             Warning[] warnings;
             string[] streamids;

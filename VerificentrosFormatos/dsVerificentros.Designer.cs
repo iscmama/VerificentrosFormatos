@@ -355,6 +355,8 @@ namespace VerificentrosFormatos {
             
             private global::System.Data.DataColumn columnfechaInstalacionTaco1;
             
+            private global::System.Data.DataColumn columnnumero1;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public SP_GetReporteByNumeroLineaDataTable() {
@@ -694,6 +696,14 @@ namespace VerificentrosFormatos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn numero1Column {
+                get {
+                    return this.columnnumero1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -767,7 +777,8 @@ namespace VerificentrosFormatos {
                         string fechaInstalacionDina1, 
                         string fechaInstalacionMicro1, 
                         string fechaInstalacionOpa1, 
-                        string fechaInstalacionTaco1) {
+                        string fechaInstalacionTaco1, 
+                        int numero1) {
                 SP_GetReporteByNumeroLineaRow rowSP_GetReporteByNumeroLineaRow = ((SP_GetReporteByNumeroLineaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         numeroCentro,
@@ -807,10 +818,18 @@ namespace VerificentrosFormatos {
                         fechaInstalacionDina1,
                         fechaInstalacionMicro1,
                         fechaInstalacionOpa1,
-                        fechaInstalacionTaco1};
+                        fechaInstalacionTaco1,
+                        numero1};
                 rowSP_GetReporteByNumeroLineaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSP_GetReporteByNumeroLineaRow);
                 return rowSP_GetReporteByNumeroLineaRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public SP_GetReporteByNumeroLineaRow FindBynumeroCentro(string numeroCentro) {
+                return ((SP_GetReporteByNumeroLineaRow)(this.Rows.Find(new object[] {
+                            numeroCentro})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -868,6 +887,7 @@ namespace VerificentrosFormatos {
                 this.columnfechaInstalacionMicro1 = base.Columns["fechaInstalacionMicro1"];
                 this.columnfechaInstalacionOpa1 = base.Columns["fechaInstalacionOpa1"];
                 this.columnfechaInstalacionTaco1 = base.Columns["fechaInstalacionTaco1"];
+                this.columnnumero1 = base.Columns["numero1"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -949,9 +969,13 @@ namespace VerificentrosFormatos {
                 base.Columns.Add(this.columnfechaInstalacionOpa1);
                 this.columnfechaInstalacionTaco1 = new global::System.Data.DataColumn("fechaInstalacionTaco1", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfechaInstalacionTaco1);
+                this.columnnumero1 = new global::System.Data.DataColumn("numero1", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnumero1);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnnumeroCentro}, true));
                 this.columnnumeroCentro.AllowDBNull = false;
+                this.columnnumeroCentro.Unique = true;
                 this.columnnumeroCentro.MaxLength = 1000;
-                this.columnrazonSocial.AllowDBNull = false;
                 this.columnrazonSocial.MaxLength = 5000;
                 this.columnsiglas.AllowDBNull = false;
                 this.columnsiglas.MaxLength = 5000;
@@ -997,6 +1021,8 @@ namespace VerificentrosFormatos {
                 this.columnfechaInstalacionTaco1.ReadOnly = true;
                 this.columnfechaInstalacionTaco1.Caption = "fechaInstalacionTaco";
                 this.columnfechaInstalacionTaco1.MaxLength = 10;
+                this.columnnumero1.AllowDBNull = false;
+                this.columnnumero1.Caption = "numero";
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1152,7 +1178,13 @@ namespace VerificentrosFormatos {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string razonSocial {
                 get {
-                    return ((string)(this[this.tableSP_GetReporteByNumeroLinea.razonSocialColumn]));
+                    try {
+                        return ((string)(this[this.tableSP_GetReporteByNumeroLinea.razonSocialColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'razonSocial\' in table \'SP_GetReporteByNumeroLinea\' is DBNul" +
+                                "l.", e);
+                    }
                 }
                 set {
                     this[this.tableSP_GetReporteByNumeroLinea.razonSocialColumn] = value;
@@ -1752,6 +1784,29 @@ namespace VerificentrosFormatos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int numero1 {
+                get {
+                    return ((int)(this[this.tableSP_GetReporteByNumeroLinea.numero1Column]));
+                }
+                set {
+                    this[this.tableSP_GetReporteByNumeroLinea.numero1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsrazonSocialNull() {
+                return this.IsNull(this.tableSP_GetReporteByNumeroLinea.razonSocialColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetrazonSocialNull() {
+                this[this.tableSP_GetReporteByNumeroLinea.razonSocialColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsrepresentanteNull() {
                 return this.IsNull(this.tableSP_GetReporteByNumeroLinea.representanteColumn);
             }
@@ -2311,7 +2366,6 @@ namespace VerificentrosFormatos.dsVerificentrosTableAdapters {
             tableMapping.ColumnMappings.Add("siglas", "siglas");
             tableMapping.ColumnMappings.Add("total", "total");
             tableMapping.ColumnMappings.Add("representante", "representante");
-            tableMapping.ColumnMappings.Add("numero", "numero");
             tableMapping.ColumnMappings.Add("combustible", "combustible");
             tableMapping.ColumnMappings.Add("tipoLinea", "tipoLinea");
             tableMapping.ColumnMappings.Add("marcaGabi", "marcaGabi");
@@ -2339,6 +2393,7 @@ namespace VerificentrosFormatos.dsVerificentrosTableAdapters {
             tableMapping.ColumnMappings.Add("fechaInstalacionMicro", "fechaInstalacionMicro1");
             tableMapping.ColumnMappings.Add("fechaInstalacionOpa", "fechaInstalacionOpa1");
             tableMapping.ColumnMappings.Add("fechaInstalacionTaco", "fechaInstalacionTaco1");
+            tableMapping.ColumnMappings.Add("numero", "numero1");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -2359,14 +2414,14 @@ namespace VerificentrosFormatos.dsVerificentrosTableAdapters {
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@numeroCentro", global::System.Data.SqlDbType.VarChar, 1000, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@linea", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@linea", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dsVerificentros.SP_GetReporteByNumeroLineaDataTable dataTable, string numeroCentro, string linea) {
+        public virtual int Fill(dsVerificentros.SP_GetReporteByNumeroLineaDataTable dataTable, string numeroCentro, global::System.Nullable<int> linea) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((numeroCentro == null)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -2374,11 +2429,11 @@ namespace VerificentrosFormatos.dsVerificentrosTableAdapters {
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((string)(numeroCentro));
             }
-            if ((linea == null)) {
-                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            if ((linea.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(linea.Value));
             }
             else {
-                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(linea));
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -2391,7 +2446,7 @@ namespace VerificentrosFormatos.dsVerificentrosTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dsVerificentros.SP_GetReporteByNumeroLineaDataTable GetData(string numeroCentro, string linea) {
+        public virtual dsVerificentros.SP_GetReporteByNumeroLineaDataTable GetData(string numeroCentro, global::System.Nullable<int> linea) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((numeroCentro == null)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -2399,11 +2454,11 @@ namespace VerificentrosFormatos.dsVerificentrosTableAdapters {
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((string)(numeroCentro));
             }
-            if ((linea == null)) {
-                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            if ((linea.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(linea.Value));
             }
             else {
-                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(linea));
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             dsVerificentros.SP_GetReporteByNumeroLineaDataTable dataTable = new dsVerificentros.SP_GetReporteByNumeroLineaDataTable();
             this.Adapter.Fill(dataTable);

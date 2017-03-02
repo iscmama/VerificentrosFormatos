@@ -15,14 +15,13 @@ namespace VerificentrosFormatos.Data
     public partial class Gabinetes
     {
         public int idGabinete { get; set; }
-        public int idLinea { get; set; }
+        public string numeroCentro { get; set; }
+        public int linea { get; set; }
         public string marca { get; set; }
         public string modelo { get; set; }
         public string serie { get; set; }
         public Nullable<System.DateTime> fechaInstalacion { get; set; }
         public System.DateTime fechaAlta { get; set; }
         public int idUsuarioAlta { get; set; }
-    
-        public virtual Lineas Lineas { get; set; }
     }
 }

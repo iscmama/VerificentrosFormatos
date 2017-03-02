@@ -17,11 +17,9 @@ namespace VerificentrosFormatos.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Verificentros()
         {
-            this.Lineas = new HashSet<Lineas>();
             this.RepresentantesLegales = new HashSet<RepresentantesLegales>();
         }
     
-        public int idVerificentro { get; set; }
         public string numeroCentro { get; set; }
         public string siglas { get; set; }
         public string razonSocial { get; set; }
@@ -29,8 +27,6 @@ namespace VerificentrosFormatos.Data
         public System.DateTime fechaAlta { get; set; }
         public int idUsuarioAlta { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Lineas> Lineas { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RepresentantesLegales> RepresentantesLegales { get; set; }
     }

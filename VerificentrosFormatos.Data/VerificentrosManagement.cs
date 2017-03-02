@@ -34,9 +34,9 @@ namespace VerificentrosFormatos.Data
                 using (var context = new VerificentrosDB())
                 {
                     var verificentros = (from v in context.Verificentros
+                                         where v.numeroCentro == "905"
                                          select new VerificentrosDTO()
                                          {
-                                             idVerificentro = v.idVerificentro,
                                              numeroCentro = v.numeroCentro,
                                              siglas = v.siglas,
                                              razonSocial = v.razonSocial,
@@ -46,11 +46,11 @@ namespace VerificentrosFormatos.Data
                                              Lineas =
                                                         (
                                                             from l in context.Lineas
-                                                            where l.idVerificentro == v.idVerificentro
+                                                            where l.numeroCentro == v.numeroCentro
                                                             select new LineasDTO()
                                                             {
                                                                 idLinea = l.idLinea,
-                                                                idVerificentro = l.idVerificentro,
+                                                                numeroCentro = l.numeroCentro,
                                                                 numero = l.numero,
                                                                 combustible = l.combustible,
                                                                 tipo    = l.tipo,
@@ -80,7 +80,6 @@ namespace VerificentrosFormatos.Data
                                          where v.numeroCentro == numeroCentro
                                          select new VerificentrosDTO()
                                          {
-                                             idVerificentro = v.idVerificentro,
                                              numeroCentro = v.numeroCentro,
                                              siglas = v.siglas,
                                              razonSocial = v.razonSocial,
@@ -90,11 +89,11 @@ namespace VerificentrosFormatos.Data
                                              Lineas =
                                                         (
                                                             from l in context.Lineas
-                                                            where l.idVerificentro == v.idVerificentro
+                                                            where l.numeroCentro == v.numeroCentro
                                                             select new LineasDTO()
                                                             {
                                                                 idLinea = l.idLinea,
-                                                                idVerificentro = l.idVerificentro,
+                                                                numeroCentro = l.numeroCentro,
                                                                 numero = l.numero,
                                                                 combustible = l.combustible,
                                                                 tipo = l.tipo,
@@ -114,14 +113,14 @@ namespace VerificentrosFormatos.Data
                 throw ex;
             }
         }
-        public static DataTable GetReporte(string numeroCentro, string linea)
+        public static DataTable GetReporte(string numeroCentro, int linea)
         {
             try
             {
                 List<ParameterIn> parameters = new List<ParameterIn>()
                 {
                     new ParameterIn() { Name = "numeroCentro", Value = numeroCentro, DBType = DbType.String },
-                    new ParameterIn() { Name = "linea", Value = linea, DBType = DbType.String }
+                    new ParameterIn() { Name = "linea", Value = linea, DBType = DbType.Int32 }
                 };
 
                 return ExecuteDataTable("SP_GetReporteByNumeroLinea", parameters.ToArray());

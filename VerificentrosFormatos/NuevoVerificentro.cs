@@ -25,6 +25,8 @@ namespace VerificentrosFormatos
         {
             try
             {
+                #region Validaciones
+
                 if (string.IsNullOrEmpty(numeroCentro.Text))
                 {
                     MessageBox.Show("Proporcione el numero de centro", "Verificentros App");
@@ -91,6 +93,8 @@ namespace VerificentrosFormatos
                     return;
                 }
 
+                #endregion Validaciones
+
                 List<RepresentantesLegales> representales = new List<RepresentantesLegales>();
 
                 foreach (DataGridViewRow rowRepresente in dgvRepresentantes.Rows)
@@ -109,6 +113,30 @@ namespace VerificentrosFormatos
                 System.Globalization.CultureInfo cultureinfo = new System.Globalization.CultureInfo("es-MX");
 
                 Nullable<DateTime> fecha = null;
+
+                List<Lineas> lineas = new List<Lineas>();
+
+                foreach (DataGridViewRow rowLinea in dgvLineas.Rows)
+                {
+                    //lineas.Add(new Lineas()
+                    //{
+                    //    numero = (string)rowLinea.Cells[1].Value,
+                    //    combustible = (string)rowLinea.Cells[2].Value,
+                    //    tipo = (string)rowLinea.Cells[3].Value,
+                    //    fechaAlta = DateTime.Now,
+                    //    idUsuarioAlta = 1,
+                    //    Gabinetes = new List<Gabinetes>()
+                    //    {
+
+                    //    }
+                    //    //Dinamometros = dinamometros.Count == 0 ? null : dinamometros,
+                    //    //Microbancas = microbancas.Count == 0 ? null : microbancas,
+                    //    //Opacimetros = opacimetros.Count == 0 ? null : opacimetros,
+                    //    //Tacometros = tacometros.Count == 0 ? null : tacometros
+                    //}
+                    //);
+                }
+
 
                 List<Gabinetes> gabinetes = new List<Gabinetes>();
 
@@ -220,25 +248,7 @@ namespace VerificentrosFormatos
                     );
                 }
 
-                List<Lineas> lineas = new List<Lineas>();
-
-                foreach (DataGridViewRow rowLinea in dgvLineas.Rows)
-                {
-                    lineas.Add(new Lineas()
-                    {
-                        numero = (string)rowLinea.Cells[1].Value,
-                        combustible = (string)rowLinea.Cells[2].Value,
-                        tipo = (string)rowLinea.Cells[3].Value,
-                        fechaAlta = DateTime.Now,
-                        idUsuarioAlta = 1,
-                        Gabinetes = gabinetes,
-                        Dinamometros = dinamometros.Count == 0 ? null : dinamometros,
-                        Microbancas = microbancas.Count == 0 ? null : microbancas,
-                        Opacimetros = opacimetros.Count == 0 ? null : opacimetros,
-                        Tacometros = tacometros.Count == 0 ? null : tacometros
-                    }
-                    );
-                }
+               
 
                 Verificentros newVerificentro = new Verificentros()
                 {
@@ -249,7 +259,7 @@ namespace VerificentrosFormatos
                     fechaAlta = DateTime.Now,
                     idUsuarioAlta = 1,
                     RepresentantesLegales = representales,
-                    Lineas = lineas
+                    //Lineas = lineas
                 };
 
                 int resultado = await VerificentrosManagement.Create(newVerificentro);

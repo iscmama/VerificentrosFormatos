@@ -15,7 +15,8 @@ namespace VerificentrosFormatos.Data
     public partial class Tacometros
     {
         public int idTacometro { get; set; }
-        public int idLinea { get; set; }
+        public string numeroCentro { get; set; }
+        public int linea { get; set; }
         public string tipo { get; set; }
         public string marca { get; set; }
         public string modelo { get; set; }
@@ -24,7 +25,5 @@ namespace VerificentrosFormatos.Data
         public string numeroFactura { get; set; }
         public System.DateTime fechaAlta { get; set; }
         public int idUsuarioAlta { get; set; }
-    
-        public virtual Lineas Lineas { get; set; }
     }
 }

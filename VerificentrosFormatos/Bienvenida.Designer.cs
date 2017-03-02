@@ -66,7 +66,7 @@
             // nuevoToolStripMenuItem
             // 
             this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(127, 26);
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(121, 24);
             this.nuevoToolStripMenuItem.Text = "Nuevo";
             this.nuevoToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
             // 
@@ -82,8 +82,8 @@
             // impresionMavisaToolStripMenuItem
             // 
             this.impresionMavisaToolStripMenuItem.Name = "impresionMavisaToolStripMenuItem";
-            this.impresionMavisaToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
-            this.impresionMavisaToolStripMenuItem.Text = "Impresion Mavisa";
+            this.impresionMavisaToolStripMenuItem.Size = new System.Drawing.Size(194, 24);
+            this.impresionMavisaToolStripMenuItem.Text = "Impresión Masiva";
             this.impresionMavisaToolStripMenuItem.Click += new System.EventHandler(this.impresionMavisaToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem

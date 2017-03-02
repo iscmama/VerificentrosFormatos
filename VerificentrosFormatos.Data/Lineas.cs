@@ -14,34 +14,12 @@ namespace VerificentrosFormatos.Data
     
     public partial class Lineas
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Lineas()
-        {
-            this.Dinamometros = new HashSet<Dinamometros>();
-            this.Gabinetes = new HashSet<Gabinetes>();
-            this.Microbancas = new HashSet<Microbancas>();
-            this.Opacimetros = new HashSet<Opacimetros>();
-            this.Tacometros = new HashSet<Tacometros>();
-        }
-    
         public int idLinea { get; set; }
-        public int idVerificentro { get; set; }
-        public string numero { get; set; }
+        public string numeroCentro { get; set; }
+        public int numero { get; set; }
         public string combustible { get; set; }
         public string tipo { get; set; }
         public System.DateTime fechaAlta { get; set; }
         public int idUsuarioAlta { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Dinamometros> Dinamometros { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Gabinetes> Gabinetes { get; set; }
-        public virtual Verificentros Verificentros { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Microbancas> Microbancas { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Opacimetros> Opacimetros { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Tacometros> Tacometros { get; set; }
     }
 }
